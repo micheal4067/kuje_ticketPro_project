@@ -10,7 +10,8 @@
   --shadow: rgba(0, 0, 0, 0.08) 0px 4px 24px;
 }*/
 
-[data-theme="dark"] {
+/*[data-theme="dark"]*/
+:root {
   --bg: #0f172a;
   --text: #f8fafc;
   --light: #1e293b;
