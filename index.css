@@ -1,6 +1,6 @@
 /* ============================
    Root Variables and Themes
-============================ */
+============================ 
 :root {
   --primary: #4f46e5;
   --dark: #0f172a;
@@ -8,7 +8,7 @@
   --text: #1e293b;
   --bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.08) 0px 4px 24px;
-}
+}*/
 
 [data-theme="dark"] {
   --bg: #0f172a;
