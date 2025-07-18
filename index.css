@@ -102,7 +102,11 @@ body {
   font-size: 2.2rem;
   margin-bottom: 1.2rem;
   animation: fadeIn 0.8s ease-out;
+  background: linear-gradient(90deg, #ceee3f, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
+
 
 .content p,
 .content ul,
@@ -111,7 +115,7 @@ body {
   animation: fadeIn 1s ease-out;
 }
 
-.content p {
+.content p, #contact a {
   margin-left: 1.5rem;
 }
 
