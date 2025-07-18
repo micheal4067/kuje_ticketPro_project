@@ -303,12 +303,6 @@ footer {
   transition: color 0.2s ease;
 }
 
-.footer-links a{
-    animation: fadeIn 0.8s ease-out;
-  background: linear-gradient(90deg, #ceee3f, #0ea5e9);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .footer-links a:hover,
 .social-icons a:hover {
