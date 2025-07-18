@@ -65,6 +65,92 @@ body {
   margin-bottom: 1.5rem;
 }
 
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 1.5rem;
+}
+
+.role-card {
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(151, 17, 17, 0.671);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-5px);
+}
+
+.role-card i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.role-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.accordion {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accordion-item {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8fafc;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.accordion-header {
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9);
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.accordion-header i {
+  margin-right: 0.6rem;
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
+}
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  background: #0f172a;
+}
+
+.accordion-body p {
+  margin: 1rem 0;
+  color: white;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+
+
 .sidebar nav a {
   display: block;
   color: var(--text);

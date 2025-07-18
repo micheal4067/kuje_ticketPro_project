@@ -62,12 +62,25 @@
 
     <section id="roles" class="reveal fade-left">
       <h1><i class="fas fa-users"></i> User Roles</h1>
-      <ul>
-        <li><strong>Administrator:</strong> Full control including entity creation, user transfer, and backups.</li>
-        <li><strong>Manager:</strong> Handles operations within a specific entity, approves shifts, views stats.</li>
-        <li><strong>Park Officer:</strong> Assigned to Entrance or Exit with scoped access to vehicle management only.</li>
-      </ul>
-    </section>
+      <div class="card-grid">
+        <div class="role-card admin">
+          <i class="fas fa-user-shield"></i>
+          <h3>Administrator</h3>
+          <p>Full control including entity creation, user transfer, and backups.</p>
+        </div>
+        <div class="role-card manager">
+          <i class="fas fa-user-tie"></i>
+          <h3>Manager</h3>
+          <p>Oversees operations in a specific entity, approves shifts, views statistics and reports.</p>
+        </div>
+        <div class="role-card officer">
+          <i class="fas fa-user-check"></i>
+          <h3>Park Officer</h3>
+          <p>Handles entry/exit gates with scoped access to ticketing and monitoring only.</p>
+        </div>
+      </div>
+    </section><br>
+
 
     <section id="features" class="reveal fade-right">
       <h1><i class="fas fa-star"></i> Features</h1>
@@ -101,14 +114,44 @@
       <a href="TicketPro_Documentation.pdf" download class="theme-toggle" style="color: rgb(146, 145, 145);">
         <i class="fas fa-file-pdf"></i> Download PDF
       </a>
-    </section>
+    </section><br>
 
-    <section id="faq" class="reveal zoom-in">
-      <h1><i class="fas fa-question-circle"></i> FAQ</h1>
-      <p><strong>Q:</strong> Can I run this offline?<br><strong>A:</strong> Yes, it works on any local web server like XAMPP/WAMP.</p>
-      <p><strong>Q:</strong> Does it support backups?<br><strong>A:</strong> Yes, you can export and restore databases directly from the maintenance page.</p>
-      <p><strong>Q:</strong> How do I change ticket prices?<br><strong>A:</strong> Managers and Admins can update ticket pricing in the Settings section based on entity configuration.</p>
-    </section>
+   <section id="faq" class="reveal zoom-in">
+  <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>
+
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <i class="fas fa-laptop-house"></i> Can I run this offline?
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <p>Yes, it works seamlessly on any local web server like XAMPP or WAMP.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <i class="fas fa-database"></i> Does it support backups?
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <p>Yes, you can export and restore databases directly from the system maintenance section.</p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">
+        <i class="fas fa-money-bill-wave"></i> How do I change ticket prices?
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <p>Managers and Admins can update ticket pricing from the Settings page based on entity configurations.</p>
+      </div>
+    </div>
+  </div>
+</section><br>
+
 
     <section id="contact" class="reveal fade-right">
       <h1><i class="fas fa-envelope"></i> Contact</h1>
@@ -135,5 +178,26 @@
   </div>
 
   <script src="index.js"></script>
+  <script>
+  const items = document.querySelectorAll('.accordion-header');
+
+  items.forEach(header => {
+    header.addEventListener('click', () => {
+      const body = header.nextElementSibling;
+      const icon = header.querySelector('.accordion-icon');
+
+      const isOpen = body.style.maxHeight;
+
+      document.querySelectorAll('.accordion-body').forEach(b => b.style.maxHeight = null);
+      document.querySelectorAll('.accordion-icon').forEach(i => i.textContent = '+');
+
+      if (!isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        icon.textContent = '−';
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
