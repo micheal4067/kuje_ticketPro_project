@@ -192,6 +192,60 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.intro-container {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2rem;
+}
+
+.intro-text {
+  max-width: 700px;
+  text-align: center;
+}
+
+
+.intro-text h1 .brand {
+  color: var(--primary, #4f46e5);
+  background: linear-gradient(to right, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.intro-text .lead {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: rgb(156, 156, 156);
+  margin-bottom: 1rem;
+}
+
+.content #intro p{
+  margin-left: 0;
+}
+
+.intro-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1068px) {
+  .intro-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .intro-text {
+    text-align: left;
+  }
+  #intro {
+  padding: 1rem 1rem;
+  color: white;
+}
+
+}
+
+
 
 .content p,
 .content ul,
