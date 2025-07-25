@@ -101,31 +101,57 @@
     </section>
 
    <section id="layout-visual" class="reveal fade-in">
-  <h1><i class="fas fa-map-marked-alt"></i> Entrance & Exit Layout Plan</h1>
+  <h1><i class="fas fa-map-marked-alt"></i> Layout Plan</h1>
   <p>This 3D visual illustration shows the proposed layout for how TicketPro will operate at the entrance and exit gate, including cubicle placement,barrier positioning along with a schematic overview of system communication between gates and the admin office..</p>
 
-  <div class="layout-flex-container">
-    <!-- Entrance Plan -->
-    <figure class="layout-item">
-      <h3><i class="fas fa-door-open"></i> Entrance Gate Layout</h3>
-      <img src="entrance-plan.png" alt="3D Entrance Layout">
-      <figcaption>3D visual showing cubicle and barrier setup at the Entrance Gate.</figcaption>
-    </figure>
+<div class="layout-flex-container">
+  <!-- Entrance Plan -->
+<figure class="layout-item">
+  <h3><i class="fas fa-arrow-right"></i> Entrance Gate Layout</h3>
+  <img src="entrance-plan.png" alt="3D Entrance Layout">
+  <figcaption>3D visual showing cubicle and barrier setup at the Entrance Gate.</figcaption>
+  <ol class="animated-steps">
+    <li style="--i:1;"><i class="fas fa-arrow-right step-icon"></i> Vehicle approaches the entrance gate.</li>
+    <li style="--i:2;"><i class="fas fa-arrow-right step-icon"></i> Motorist is informed of the ticket price and makes payment.</li>
+    <li style="--i:3;"><i class="fas fa-arrow-right step-icon"></i> Receipt is generated and issued to the driver.</li>
+    <li style="--i:4;"><i class="fas fa-arrow-right step-icon"></i> TicketPro sends a signal to the barrier system.</li>
+    <li style="--i:5;"><i class="fas fa-arrow-right step-icon"></i> Boom barrier opens automatically.</li>
+    <li style="--i:6;"><i class="fas fa-arrow-right step-icon"></i> Vehicle enters the premises.</li>
+  </ol>
+</figure>
 
-    <!-- Exit Plan -->
-    <figure class="layout-item">
-      <h3><i class="fas fa-door-closed"></i> Exit Gate Layout</h3>
-      <img src="exit-plan.png" alt="3D Exit Layout">
-      <figcaption>3D visual showing cubicle and barrier setup at the Exit Gate.</figcaption>
-    </figure>
 
-    <!-- Schematic -->
-    <figure class="layout-item">
-      <h3><i class="fas fa-network-wired"></i> System Communication Diagram</h3>
-      <img src="schematic.png" alt="TicketPro Operation Diagram">
-      <figcaption>Diagram showing how Entrance/Exit Gates communicate with the Admin Office via the TicketPro server.</figcaption>
-    </figure>
-  </div>
+  <!-- Exit Plan -->
+  <figure class="layout-item">
+    <h3><i class="fas fa-arrow-left"></i> Exit Gate Layout</h3>
+    <img src="exit-plan.png" alt="3D Exit Layout">
+    <figcaption>3D visual showing cubicle and barrier setup at the Exit Gate.</figcaption>
+    <ol class="animated-steps">
+      <li style="--i:1;"><i class="fas fa-arrow-left step-icon"></i> Vehicle approaches the exit gate.</li>
+      <li style="--i:2;"><i class="fas fa-arrow-left step-icon"></i> Operator scans or verifies the issued receipt.</li>
+      <li style="--i:3;"><i class="fas fa-arrow-left step-icon"></i> System confirms exit eligibility and time.</li>
+      <li style="--i:4;"><i class="fas fa-arrow-left step-icon"></i> Any pending payment is settled if applicable.</li>
+      <li style="--i:5;"><i class="fas fa-arrow-left step-icon"></i> TicketPro opens the boom barrier automatically.</li>
+      <li style="--i:6;"><i class="fas fa-arrow-left step-icon"></i> Vehicle exits the premises and system logs the exit.</li>
+    </ol>
+  </figure>
+
+  <!-- Admin Communication Plan -->
+  <figure class="layout-item">
+    <h3><i class="fas fa-project-diagram"></i> System Communication Diagram</h3>
+    <img src="schematic.png" alt="TicketPro Operation Diagram">
+    <figcaption>Diagram showing how Entrance/Exit Gates communicate with the Admin Office via the TicketPro server.</figcaption>
+    <ol class="animated-steps">
+      <li style="--i:1;"><i class="fas fa-arrow-down step-icon"></i> TicketPro server is hosted in the Admin Office.</li>
+      <li style="--i:2;"><i class="fas fa-arrow-down step-icon"></i> Entrance/Exit cubicles are connected via network (LAN or Wi-Fi).</li>
+      <li style="--i:3;"><i class="fas fa-arrow-down step-icon"></i> Admin monitors entry/exit logs and operator activities in real-time.</li>
+      <li style="--i:4;"><i class="fas fa-arrow-down step-icon"></i> Reports, access logs, and ticket data sync continuously to the server.</li>
+      <li style="--i:5;"><i class="fas fa-arrow-down step-icon"></i> Admin can remotely generate reports, update ticket prices or block access.</li>
+    </ol>
+  </figure>
+</div>
+
+
 </section>
 
 <br>
