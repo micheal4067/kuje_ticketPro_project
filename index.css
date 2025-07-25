@@ -245,6 +245,76 @@ body {
 
 }
 
+.features-section {
+  padding: 2rem;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin: 2rem auto;
+  max-width: 900px;
+  transition: all 0.3s ease-in-out;
+}
+
+.features-section h1 {
+  font-size: 2rem;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+  border-left: 6px solid #4f46e5;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.feature-list li:hover {
+  transform: translateX(5px);
+  background-color: #f1f5ff;
+}
+
+.feature-list i {
+  font-size: 1.4rem;
+  color: #4f46e5;
+  margin-right: 1rem;
+  min-width: 25px;
+  text-align: center;
+}
+
+.feature-list span {
+  font-size: 1.05rem;
+  color: #334155;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .features-section {
+    padding: 1.2rem;
+  }
+
+  .feature-list li {
+    flex-direction: row;
+    padding: 0.8rem;
+  }
+
+  .feature-list span {
+    font-size: 0.95rem;
+  }
+}
+
+
 
 
 .content p,
