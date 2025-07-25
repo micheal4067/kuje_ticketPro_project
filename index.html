@@ -52,16 +52,12 @@
 </section>
 
 
-    <section id="install" class="reveal fade-right">
-      <h1><i class="fas fa-download"></i> Installation</h1>
-      <ul>
-        <li>Download and extract the source code into your web server (e.g., XAMPP htdocs).</li>
-        <li>Update <code>config/database.php</code> with your MySQL credentials.</li>
-        <li>Import the ticket main database and create the entity-specific databases as needed.</li>
-        <li>Ensure all required PHP extensions (mysqli, fileinfo) are enabled.</li>
-        <li>Run the software by visiting <code>http://localhost/ticketPro</code> in your browser.</li>
-      </ul>
-    </section>
+   <section id="install" class="reveal fade-right">
+  <h1><i class="fas fa-download"></i> Installation & Setup</h1>
+  <p>Our experienced technical team will handle the complete installation and deployment of <strong>TicketPro</strong> on your preferred server infrastructure. This includes setting up the backend environment, configuring the software, and ensuring seamless integration with your entry and exit systems.</p>
+
+  <p>You won’t need to worry about any technical complexities — from database configuration to barrier control setup, everything will be handled efficiently by our professionals. We’ll also ensure the system is tested, secured, and ready for operational use.</p>
+</section>
 
     <section id="usage" class="reveal zoom-in">
       <h1><i class="fas fa-play-circle"></i> Usage Guide</h1>
@@ -104,14 +100,43 @@
       </ul>
     </section>
 
-    <section id="layout-visual" class="reveal fade-in">
+   <section id="layout-visual" class="reveal fade-in">
   <h1><i class="fas fa-map-marked-alt"></i> Entrance & Exit Layout Plan</h1>
-  <p>This 3D visual illustration shows the proposed layout for how TicketPro will operate at the entrance and exit gate, including cubicle placement, barrier positioning, and staff engagement with motorists.</p>
-  <div style="text-align: center; margin-top: 1rem;">
-    <img src="entrance-plan.png" alt="3D Entrance Layout" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
-  </div>
-</section><br>
+  <p>This 3D visual illustration shows the proposed layout for how TicketPro will operate at the entrance and exit gate, including cubicle placement,barrier positioning along with a schematic overview of system communication between gates and the admin office..</p>
 
+  <div class="layout-flex-container">
+    <!-- Entrance Plan -->
+    <figure class="layout-item">
+      <h3><i class="fas fa-door-open"></i> Entrance Gate Layout</h3>
+      <img src="entrance-plan.png" alt="3D Entrance Layout">
+      <figcaption>3D visual showing cubicle and barrier setup at the Entrance Gate.</figcaption>
+    </figure>
+
+    <!-- Exit Plan -->
+    <figure class="layout-item">
+      <h3><i class="fas fa-door-closed"></i> Exit Gate Layout</h3>
+      <img src="exit-plan.png" alt="3D Exit Layout">
+      <figcaption>3D visual showing cubicle and barrier setup at the Exit Gate.</figcaption>
+    </figure>
+
+    <!-- Schematic -->
+    <figure class="layout-item">
+      <h3><i class="fas fa-network-wired"></i> System Communication Diagram</h3>
+      <img src="schematic.png" alt="TicketPro Operation Diagram">
+      <figcaption>Diagram showing how Entrance/Exit Gates communicate with the Admin Office via the TicketPro server.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<br>
+
+    <section id="pdf" class="reveal fade-left">
+      <h1><i class="fas fa-file-pdf"></i> Download Documentation PDF</h1>
+      <p>You can download the complete documentation as a PDF file for offline use.</p>
+      <a href="TicketPro_Documentation.pdf" download class="theme-toggle" style="color: rgb(146, 145, 145);">
+        <i class="fas fa-file-pdf"></i> Download PDF
+      </a>
+    </section><br>
 
     <section id="video" class="reveal fade-left">
       <div class="video-container" onclick="togglePlay(this)">
@@ -125,14 +150,6 @@
         <a href="https://drive.google.com/file/d/1Pu61kZX61fcMW9GDtr6nKamo3xw3VYDI/view?usp=sharing" download style="color: rgb(146, 145, 145);">click here to view or download</a>.
       </p>
     </section>
-
-    <section id="pdf" class="reveal fade-left">
-      <h1><i class="fas fa-file-pdf"></i> Download Documentation PDF</h1>
-      <p>You can download the complete documentation as a PDF file for offline use.</p>
-      <a href="TicketPro_Documentation.pdf" download class="theme-toggle" style="color: rgb(146, 145, 145);">
-        <i class="fas fa-file-pdf"></i> Download PDF
-      </a>
-    </section><br>
 
    <section id="faq" class="reveal zoom-in">
   <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>

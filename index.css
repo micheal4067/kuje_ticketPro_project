@@ -262,6 +262,85 @@ ul {
   padding-left: 2.5rem;
 }
 
+.layout-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+/* Base layout item */
+.layout-item {
+  flex: 1 1 100%;
+  text-align: center;
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.layout-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.layout-item img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease;
+}
+
+.layout-item img:hover {
+  transform: scale(1.02);
+}
+
+/* Text styling */
+.layout-item h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.05rem;
+  color: white;
+  font-weight: 600;
+}
+
+.layout-item figcaption {
+  font-size: 0.9rem;
+  color: white;
+  line-height: 1.5;
+  margin: 0.5rem 0 0;
+}
+
+/* Medium screens: 2 per row */
+@media (min-width: 875px) {
+  .layout-item {
+    flex: 1 1 calc(50% - 1rem);
+  }
+
+  /* Make 3rd item centered and 80% wide on wrap */
+  .layout-item:nth-child(3) {
+    flex: 0 1 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Large screens: 3 per row */
+@media (min-width: 992px) {
+  .layout-item {
+    flex: 1 1 calc(33.333% - 1.33rem);
+  }
+
+  .layout-item:nth-child(3) {
+    margin: 0; /* remove centering on large screens */
+  }
+}
+
+
+
 /* ============================
    Video Player
 ============================ */
