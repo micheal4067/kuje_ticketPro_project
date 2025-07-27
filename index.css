@@ -12,7 +12,7 @@
 
 /*[data-theme="dark"]*/
 :root {
-  --bg: #0f172a;
+  --bg: oklch(13% .028 261.692);
   --text: #f8fafc;
   --light: #1e293b;
   --primary: #4f46e5;
@@ -271,18 +271,18 @@ body {
 .feature-list li {
   display: flex;
   align-items: center;
-  background: #fff;
+  background: var(--bg);
   padding: 1rem 1.2rem;
   margin-bottom: 1rem;
   border-left: 6px solid #4f46e5;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease;
+  
 }
 
 .feature-list li:hover {
   transform: translateX(5px);
-  background-color: #f1f5ff;
 }
 
 .feature-list i {
@@ -295,7 +295,7 @@ body {
 
 .feature-list span {
   font-size: 1.05rem;
-  color: #334155;
+  color: white;
 }
 
 /* Responsive for small screens */
@@ -365,17 +365,7 @@ ul {
   width: 200%;
   height: 200%;
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05), transparent 70%);
-  animation: floatGlow 8s linear infinite;
   z-index: 0;
-}
-
-@keyframes floatGlow {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(50%, 50%);
-  }
 }
 
 .layout-item:hover {
@@ -490,7 +480,7 @@ ul {
 
 @media (max-width: 767px) {
   .step-icon {
-    display: none;
+    
   }
 }
 
@@ -614,13 +604,13 @@ footer {
 .menu-toggle {
   display: none;
   position: fixed;
-  top: 1rem;
-  left: 1rem;
+  top: 0;
+  left: 0;
+  right: 0;
   background: var(--primary);
   color: white;
   padding: 0.5rem 1rem;
   border: none;
-  border-radius: 6px;
   z-index: 1100;
   font-size: 1rem;
 }
