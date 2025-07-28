@@ -1,11 +1,11 @@
 function toggleMenu() {
   const sidebar = document.getElementById('sidebar');
   const content = document.querySelector('.content');
-  const body = document.body;
+
 
   sidebar.classList.toggle('active');
   content.classList.toggle('blur');
-  body.classList.toggle('no-scroll');
+  
 
   if (sidebar.classList.contains('active')) {
     document.addEventListener('click', handleOutsideClick);
@@ -18,12 +18,10 @@ function handleOutsideClick(event) {
   const sidebar = document.getElementById('sidebar');
   const toggleBtn = document.querySelector('.menu-toggle');
   const content = document.querySelector('.content');
-  const body = document.body;
 
   if (!sidebar.contains(event.target) && !toggleBtn.contains(event.target)) {
     sidebar.classList.remove('active');
     content.classList.remove('blur');
-    body.classList.remove('no-scroll');
     document.removeEventListener('click', handleOutsideClick);
   }
 }

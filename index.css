@@ -9,6 +9,7 @@
   --bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.08) 0px 4px 24px;
 }*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
 /*[data-theme="dark"]*/
 :root {
@@ -36,11 +37,12 @@ body {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Raleway', sans-serif;
   background: var(--bg);
   color: var(--text);
   display: flex;
   min-height: 100vh;
+  min-width: 300px;
 }
 
 /* ============================
@@ -59,11 +61,16 @@ body {
   z-index: 1000;
 }
 
-.sidebar h2 {
-  color: var(--primary);
-  font-size: 1.7rem;
-  margin-bottom: 1.5rem;
+.top-header h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  background: linear-gradient(90deg, #ffffff, #ff80ff); /* White to pink-purple */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
 }
+
 
 .card-grid {
   display: grid;
@@ -172,7 +179,8 @@ body {
 ============================ */
 .content {
   margin-left: 280px;
-  padding: 2rem;
+  margin-top: 2rem;
+  padding: 2rem 2rem 0 2rem;
   width: 100%;
   transition: margin-left 0.3s;
   line-height: 1.8;
@@ -392,10 +400,12 @@ ul {
   z-index: 1;
 }
 
-.no-scroll {
+body.no-scroll {
   overflow: hidden;
-  height: 100vh;
+  position: fixed;
+  width: 100%;
 }
+
 
 
 /* === Images === */
@@ -607,18 +617,23 @@ footer {
 /* ============================
    Utility: Buttons & Search
 ============================ */
-.menu-toggle {
-  display: none;
+.top-header {
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   background: var(--primary);
-  color: white;
   padding: 0.5rem 1rem;
-  border: none;
   z-index: 1100;
+}
+.menu-toggle{
+  display: none;
+  background: transparent;
   font-size: 1rem;
+  color: white;
+  border: none;
 }
 
 .search-input {
@@ -702,7 +717,7 @@ footer {
 
   .content {
     margin-left: 0;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
   }
 
   .menu-toggle {

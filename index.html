@@ -14,12 +14,15 @@
 </head>
 
 <body>
-  <button class="menu-toggle" onclick="toggleMenu()">
-    <i class="fas fa-bars"></i> Menu
-  </button>
+  <div class="top-header">
+    <h2> TicketPro Docs</h2>
+    <button class="menu-toggle" onclick="toggleMenu()">
+      <i class="fas fa-bars"></i> Menu
+    </button>
+  </div>
 
   <div class="sidebar" id="sidebar">
-    <br><h2><i class="fas fa-ticket-alt"></i> TicketPro Docs</h2>
+    <br><br>
     <input type="text" class="search-input" id="searchBox" placeholder="Search documentation...">
     <div id="noResults" style="padding: 0.5rem; font-size: 0.9rem; color: crimson; display: none;">No match found.</div>
 
@@ -42,7 +45,7 @@
   <div class="intro-container">
     <div class="intro-text">
       <h1><i class="fas fa-book"></i> Welcome to <span class="brand">TicketPro</span></h1>
-      <p class="lead">A smart vehicle management software built to monitor vehicle entry and exit at entities, control gate barriers, issue digital receipts, and track operator shifts across multiple locations.</p>
+      <p class="lead">A smart vehicle management software built to monitor vehicle entry and exit at entities, control gate barriers, issue digital tickets, and track operator shifts across multiple locations.</p>
       <p>Improve transparency, reduce human error, and gain real-time insights—all in one place.</p>
     </div>
     <div class="intro-image">
