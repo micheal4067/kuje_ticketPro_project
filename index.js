@@ -105,3 +105,48 @@ function revealOnScroll() {
 
   window.addEventListener('scroll', revealOnScroll);
   window.addEventListener('load', revealOnScroll);
+
+  document.addEventListener("DOMContentLoaded", () => {
+  const hasSeen = localStorage.getItem('didYouKnowSeen');
+  const popup = document.getElementById('didYouKnowPopup');
+  const overlay = document.getElementById('didYouKnowOverlay');
+  const icon = document.getElementById('didYouKnowIcon');
+
+  if (!hasSeen) {
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+  } else {
+    icon.style.display = 'flex';
+  }
+});
+
+function dismissDidYouKnow() {
+  localStorage.setItem('didYouKnowSeen', 'true');
+  document.getElementById('didYouKnowPopup').style.display = 'none';
+  document.getElementById('didYouKnowOverlay').style.display = 'none';
+  document.getElementById('didYouKnowIcon').style.display = 'flex';
+}
+
+function reopenDidYouKnow() {
+  document.getElementById('didYouKnowPopup').style.display = 'block';
+  document.getElementById('didYouKnowOverlay').style.display = 'block';
+}
+
+  const items = document.querySelectorAll('.accordion-header');
+
+  items.forEach(header => {
+    header.addEventListener('click', () => {
+      const body = header.nextElementSibling;
+      const icon = header.querySelector('.accordion-icon');
+
+      const isOpen = body.style.maxHeight;
+
+      document.querySelectorAll('.accordion-body').forEach(b => b.style.maxHeight = null);
+      document.querySelectorAll('.accordion-icon').forEach(i => i.textContent = '+');
+
+      if (!isOpen) {
+        body.style.maxHeight = body.scrollHeight + 'px';
+        icon.textContent = '−';
+      }
+    });
+  });

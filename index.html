@@ -176,7 +176,7 @@
         <div class="custom-toggle-btn play-button"><i class="fas fa-play"></i></div>
       </div>
       <p>If you don’t see the video, 
-        <a href="https://drive.google.com/file/d/1Pu61kZX61fcMW9GDtr6nKamo3xw3VYDI/view?usp=sharing" download style="color: rgb(146, 145, 145);">click here to view or download</a>.
+        <a href="check_back.html" style="color: rgb(146, 145, 145);">click here to view or download</a>.
       </p>
     </section>
 
@@ -241,27 +241,21 @@
     </footer>
   </div>
 
+<!-- Overlay -->
+<div id="didYouKnowOverlay"></div>
+
+<!-- Did You Know Popup -->
+<div id="didYouKnowPopup" class="did-you-know-popup">
+  <h3><i class="fas fa-lightbulb"></i> Did You Know?</h3>
+  <p>If just 150 cars pay ₦200 daily for parking in a business area or mall, that adds up to ₦10,950,000 in revenue every year.</p>
+  <button onclick="dismissDidYouKnow()">Got It</button>
+</div>
+
+<!-- Floating Spinning Icon -->
+<div id="didYouKnowIcon" class="did-you-know-icon" onclick="reopenDidYouKnow()" title="Did You Know?">
+  <i class="fas fa-lightbulb"></i>
+</div>
   <script src="index.js"></script>
-  <script>
-  const items = document.querySelectorAll('.accordion-header');
-
-  items.forEach(header => {
-    header.addEventListener('click', () => {
-      const body = header.nextElementSibling;
-      const icon = header.querySelector('.accordion-icon');
-
-      const isOpen = body.style.maxHeight;
-
-      document.querySelectorAll('.accordion-body').forEach(b => b.style.maxHeight = null);
-      document.querySelectorAll('.accordion-icon').forEach(i => i.textContent = '+');
-
-      if (!isOpen) {
-        body.style.maxHeight = body.scrollHeight + 'px';
-        icon.textContent = '−';
-      }
-    });
-  });
-</script>
-
 </body>
+
 </html>

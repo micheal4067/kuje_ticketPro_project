@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Check Back Soon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: #e0e7ff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .message-container {
+      background: rgba(30, 58, 138, 0.2);
+      padding: 3rem 2rem;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      backdrop-filter: blur(5px);
+      max-width: 450px;
+      width: 100%;
+    }
+
+    .message-container h1 {
+      font-size: 2rem;
+      color: #93c5fd;
+      margin-bottom: 1rem;
+    }
+
+    .message-container p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      color: #cbd5e1;
+    }
+
+    .home-link {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      background: #2563eb;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+    }
+
+    .home-link:hover {
+      background: #1d4ed8;
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(147, 197, 253, 0.8);
+    }
+  </style>
+</head>
+<body>
+  <div class="message-container">
+    <h1><i class="fas fa-clock"></i> Check Back Soon</h1>
+    <p>This page isn't available yet. We're working on something great — please check back in a few days.</p>
+    <a href="index.html" class="home-link"><i class="fas fa-home"></i> Back to Home</a>
+  </div>
+</body>
+</html>
