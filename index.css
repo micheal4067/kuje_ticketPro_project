@@ -1,6 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
 /* ============================
    Root Variables and Themes
-============================ 
+============================ */
+
 :root {
   --primary: #4f46e5;
   --dark: #0f172a;
@@ -8,11 +12,10 @@
   --text: #1e293b;
   --bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.08) 0px 4px 24px;
-}*/
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+}
 
-/*[data-theme="dark"]*/
-:root {
+[data-theme="dark"]
+ {
   --bg: oklch(13% .028 261.692);
   --text: #f8fafc;
   --light: #1e293b;
@@ -303,7 +306,7 @@ body {
 
 .feature-list span {
   font-size: 1.05rem;
-  color: white;
+  color: var(--text);
 }
 
 /* Responsive for small screens */
@@ -406,6 +409,9 @@ body.no-scroll {
   width: 100%;
 }
 
+.reveal a{
+  color: var(--text);
+}
 
 
 /* === Images === */
@@ -729,7 +735,7 @@ footer {
   }
 
   #intro {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
   }
 }
 
