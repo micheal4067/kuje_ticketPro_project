@@ -53,7 +53,6 @@ document.getElementById('searchBox').addEventListener('input', function () {
     if (match) matchFound = true;
   });
 
-  // Show or hide the "noResults" message
   document.getElementById('noResults').style.display = matchFound ? 'none' : 'block';
 });
 
@@ -76,7 +75,6 @@ document.getElementById('searchBox').addEventListener('input', function () {
   }
 }
 
-// Reset icon to play when video ends
 document.addEventListener('DOMContentLoaded', () => {
   const video = document.getElementById('tutorialVideo');
   const container = document.querySelector('.video-container');
