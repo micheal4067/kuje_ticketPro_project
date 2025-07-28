@@ -3,7 +3,7 @@
 
 /* ============================
    Root Variables and Themes
-============================ */
+============================ 
 
 :root {
   --primary: #4f46e5;
@@ -13,9 +13,10 @@
   --bg: #ffffff;
   --shadow: rgba(0, 0, 0, 0.08) 0px 4px 24px;
 }
+  */
 
-[data-theme="dark"]
- {
+/*[data-theme="dark"]*/
+ :root {
   --bg: oklch(13% .028 261.692);
   --text: #f8fafc;
   --light: #1e293b;
@@ -228,10 +229,12 @@ body {
   font-weight: 500;
   color: rgb(156, 156, 156);
   margin-bottom: 1rem;
+   margin-left: 0;
 }
 
-.content #intro p{
+ .content #intro .intro-text .span{
   margin-left: 0;
+  color: var(--text);
 }
 
 .intro-image img {
