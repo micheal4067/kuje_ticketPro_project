@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Check Back Soon</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="icon" href="michellene-logo.png" type="image/png">
-    <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="michellene-logo.png" type="image/png">
+  <meta name="theme-color" content="#0f172a">
   <style>
     * {
       margin: 0;
@@ -16,7 +16,7 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      background: oklch(13% .028 261.692);
       color: #e0e7ff;
       height: 100vh;
       display: flex;
@@ -44,8 +44,15 @@
 
     .message-container p {
       font-size: 1.1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       color: #cbd5e1;
+    }
+
+    #countdown {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #facc15;
+      margin-bottom: 2rem;
     }
 
     .home-link {
@@ -70,8 +77,34 @@
 <body>
   <div class="message-container">
     <h1><i class="fas fa-clock"></i> Check Back Soon</h1>
-    <p>This page isn't available yet. We're working on something great — please check back in a few days.</p>
+    <p>This video isn't available yet. We're currently working on it — please check back in a few days.</p>
+    <div id="countdown">Loading countdown...</div>
     <a href="index.html" class="home-link"><i class="fas fa-home"></i> Back to Home</a>
   </div>
+
+  <script>
+    const countdownElement = document.getElementById('countdown');
+    const targetTime = new Date(Date.now() + 48 * 60 * 60 * 1000); // 48 hours from now
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = targetTime - now;
+
+      if (diff <= 0) {
+        countdownElement.innerHTML = "We're back!";
+        clearInterval(interval);
+        return;
+      }
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+      countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s remaining`;
+    }
+
+    const interval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
 </body>
 </html>
