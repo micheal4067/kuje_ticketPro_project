@@ -83,28 +83,34 @@
   </div>
 
   <script>
-    const countdownElement = document.getElementById('countdown');
-    const targetTime = new Date(Date.now() + 48 * 60 * 60 * 1000); // 48 hours from now
+  const countdownElement = document.getElementById('countdown');
+  const targetTime = new Date("2025-08-01T12:00:00+01:00");
 
-    function updateCountdown() {
-      const now = new Date();
-      const diff = targetTime - now;
+  function updateCountdown() {
+    const now = new Date();
+    const diff = targetTime - now;
 
-      if (diff <= 0) {
-        countdownElement.innerHTML = "We're back!";
-        clearInterval(interval);
-        return;
-      }
+    if (diff <= 0) {
+      countdownElement.innerHTML = "We're back!";
+      clearInterval(interval);
 
-      const hours = Math.floor(diff / (1000 * 60 * 60));
-      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      setTimeout(() => {
+        window.location.href = "index.html"; 
+      }, 2000);
 
-      countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s remaining`;
+      return;
     }
 
-    const interval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-  </script>
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s remaining`;
+  }
+
+  const interval = setInterval(updateCountdown, 1000);
+  updateCountdown();
+</script>
+
 </body>
 </html>
