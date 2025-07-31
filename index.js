@@ -148,3 +148,5 @@ function reopenDidYouKnow() {
       }
     });
   });
+
+   document.getElementById("year").textContent = new Date().getFullYear();
