@@ -142,58 +142,80 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.faq-section {
+  background: linear-gradient(to right, #0f172a, #1e293b);
+  padding: 1rem;
+  border-radius: 12px;
+  color: #f1f5f9;
+}
+
 .accordion {
-  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .accordion-item {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
   border-radius: 10px;
   overflow: hidden;
-  background: #f8fafc;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.accordion-item:hover {
+  transform: scale(1.01);
 }
 
 .accordion-header {
-  background: linear-gradient(90deg, #4f46e5, #0ea5e9);
-  color: white;
-  padding: 1rem;
   width: 100%;
-  font-size: 1rem;
+  background: transparent;
+  color: #e2e8f0;
   font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem;
   border: none;
-  text-align: left;
   display: flex;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 
 .accordion-header i {
   margin-right: 0.6rem;
+  color: #38bdf8;
 }
 
 .accordion-icon {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  transition: transform 0.3s;
 }
 
 .accordion-body {
   max-height: 0;
   overflow: hidden;
+  transition: max-height 0.4s ease;
   padding: 0 1rem;
-  transition: max-height 0.4s ease, padding 0.3s ease;
-  background: #0f172a;
 }
 
 .accordion-body p {
-  margin: 1rem 0;
-  color: white;
+  padding: 1rem 0;
+  color: #cbd5e1;
   font-size: 0.95rem;
-  line-height: 1.5;
 }
+
+/* Optional: Open State */
+.accordion-item.open .accordion-body {
+  max-height: 500px; /* enough to show all content */
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
 
 .sidebar nav a {
   display: block;
@@ -364,8 +386,11 @@ body {
   animation: fadeIn 1s ease-out;
 }
 
-.content p, #contact a {
+.content p {
   margin-left: 1.5rem;
+}
+.content .contact-section {
+  margin-left: 0;
 }
 
 ul {
@@ -581,6 +606,52 @@ body.no-scroll {
   pointer-events: all;
 }
 
+.contact-section {
+  background: linear-gradient(to right, #0f172a, #1e293b); /* dark blue to dark slate */
+  padding: 1rem;
+  border-radius: 12px;
+  color: #f1f5f9;
+  margin-bottom: 2rem;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.contact-grid {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-box {
+  background: rgba(255, 255, 255, 0.05); /* transparent overlay effect */
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.3s;
+  backdrop-filter: blur(4px);
+}
+
+.contact-box:hover {
+  transform: translateY(-5px);
+}
+
+.contact-box i {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: #38bdf8; /* light blue accent */
+}
+
+.contact-box a, .contact-box p {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+
 .footer-gradient {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #e2e8f0;
@@ -601,7 +672,7 @@ body.no-scroll {
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .footer-bottom-brand img {
