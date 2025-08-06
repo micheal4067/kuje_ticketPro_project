@@ -669,7 +669,7 @@ body.no-scroll {
 .footer-gradient {
   background: var(--box-content);
   color: var(--text);
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 0 0;
   font-family: 'Inter', 'Raleway', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -788,7 +788,8 @@ body.no-scroll {
   font-size: 0.85rem;
   color: var(--footer-copy);
   border-top: 1px solid var(--footer-border-top);
-  padding: 1.5rem;
+  height: 5.5rem;
+  padding-top: 1rem;
   margin-top: 2rem;
   background: var(--header);
 }
