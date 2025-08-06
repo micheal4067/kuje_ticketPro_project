@@ -14,6 +14,8 @@
 --footer-copy: #606264;
 --footer-border-top: rgba(105, 103, 103, 0.308);
 --theme: #b9c5d6;
+--header: #292929 ;
+--box-content: white;
 
 
 }
@@ -28,11 +30,13 @@
   --content-box: linear-gradient(135deg, #0f172a, #1e293b);
   --contact-box: rgba(255, 255, 255, 0.05);
   --contact-section: linear-gradient(to right, #0f172a, #1e293b);
+  --header: linear-gradient(135deg, #0f172a, #1e293b) ;
   --footer-gradient:linear-gradient(135deg, #0f172a, #1e293b);
   --content-h1: linear-gradient(90deg, #ceee3f, #0ea5e9);
   --footer-copy: #94a3b8;
   --footer-border-top: rgba(255, 255, 255, 0.08);
   --theme: #0f172a;
+  --box-content: linear-gradient(135deg, #0f172a, #1e293b);
 }
 
 html,
@@ -77,7 +81,7 @@ body {
   right: 0;
   height: 64px;
   padding: 0 1.5rem;
-  background: var(--footer-gradient);
+  background: var(--header);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1100;
 }
@@ -102,7 +106,7 @@ body {
 .menu-toggle {
   background: transparent;
   font-size: 1.25rem;
-  color: var(--text);
+  color: white;
   border: none;
   cursor: pointer;
   padding: 0.4rem;
@@ -154,7 +158,7 @@ body {
 }
 
 .faq-section {
-  background: var(--footer-gradient);
+  background: var(--box-content);
   padding: 1rem;
   border-radius: 12px;
   color: var(--text);
@@ -323,7 +327,7 @@ body {
 
 .features-section {
   padding: 2rem;
-  background: var(--footer-gradient);
+  background: var(--box-content);
   border-radius: 20px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
   margin: 2rem auto;
@@ -418,7 +422,7 @@ ul {
 
 .layout-item {
   flex: 1 1 100%;
-  background: var(--footer-gradient); 
+  background: var(--box-content); 
   padding: 2rem 0.5rem;
   border-radius: 16px;
   text-align: center;
@@ -617,7 +621,7 @@ body.no-scroll {
 }
 
 .contact-section {
-  background: var(--footer-gradient); /* dark blue to dark slate */
+  background: var(--box-content); /* dark blue to dark slate */
   padding: 1rem;
   border-radius: 12px;
   color: var(--text);
@@ -663,7 +667,7 @@ body.no-scroll {
 
 
 .footer-gradient {
-  background: var(--footer-gradient);
+  background: var(--box-content);
   color: var(--text);
   padding: 4rem 2rem 2rem;
   font-family: 'Inter', 'Raleway', sans-serif;
@@ -784,8 +788,9 @@ body.no-scroll {
   font-size: 0.85rem;
   color: var(--footer-copy);
   border-top: 1px solid var(--footer-border-top);
-  padding-top: 1.5rem;
+  padding: 1.5rem;
   margin-top: 2rem;
+  background: var(--header);
 }
 
 .search-input {
