@@ -10,7 +10,7 @@
   --contact-box: rgba(243, 244, 246, 0.8);  
   --contact-section: linear-gradient(to right, #e0f2fe, #f0f9ff); 
 --footer-gradient: linear-gradient(135deg, #cbd5e1, #94a3b8);
---content-h1: linear-gradient(90deg, #4d7c0f, #0369a1);
+--content-h1: black;
 --footer-copy: #606264;
 --footer-border-top: rgba(105, 103, 103, 0.308);
 --theme: #b9c5d6;
@@ -669,7 +669,7 @@ body.no-scroll {
 .footer-gradient {
   background: var(--box-content);
   color: var(--text);
-  padding: 4rem 0 0;
+  padding: 4rem 2rem 0;
   font-family: 'Inter', 'Raleway', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -703,7 +703,7 @@ body.no-scroll {
 }
 
 .footer-bottom-brand p {
-  font-size: 0.95rem;
+  font-size: 10px;
   color: var(--text);
   margin-top: 0.4rem;
 }
@@ -735,9 +735,10 @@ body.no-scroll {
 }
 
 .footer-brand p {
-  font-size: 1rem;
+  font-size: 14px;
   color: var(--text);
   margin: 0.3rem 0 0;
+  font-family: 'Inter', 'Raleway', sans-serif;
 }
 
 .footer-grid {
