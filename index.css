@@ -196,6 +196,7 @@ body {
   align-items: center;
   cursor: pointer;
   transition: background 0.3s;
+  font-family: 'raleway';
 }
 
 .accordion-header i {
@@ -687,6 +688,9 @@ body.no-scroll {
   text-align: center;
   flex-direction: column;
   margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-top: 1px solid var(--footer-border-top);
+  padding-top: 2rem;
 }
 
 .footer-bottom-brand img {
@@ -738,7 +742,7 @@ body.no-scroll {
   font-size: 14px;
   color: var(--text);
   margin: 0.3rem 0 0;
-  font-family: 'Inter', 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .footer-grid {
@@ -791,7 +795,6 @@ body.no-scroll {
   border-top: 1px solid var(--footer-border-top);
   height: 5.5rem;
   padding: 1rem;
-  margin-top: 2rem;
   background: var(--header);
   
 }
