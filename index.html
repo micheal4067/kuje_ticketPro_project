@@ -1,283 +1,343 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0f172a">
-  <title>TicketPro Docs</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="logo.jpg" type="image/png">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <title>TicketPro Docs</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="logo.jpg" type="image/png" />
+  </head>
 
-<body>
-  <div class="top-header">
-    <div class="header-brand">
-      <div>
-         <img src="title-icon.png" alt="TicketPro Logo" class="header-logo">
-      </div>
-      <h2>TicketPro</h2>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>  
-
-  <div class="sidebar" id="sidebar">
-    <br><br>
-    <input type="text" class="search-input" id="searchBox" placeholder="Search documentation...">
-    <div id="noResults" style="padding: 0.5rem; font-size: 0.9rem; color: crimson; display: none;">No match found.</div>
-    <nav id="docLinks">
-      <a href="#intro"><i class="fas fa-book"></i> Introduction</a>
-      <a href="#install"><i class="fas fa-download"></i> Installation</a>
-      <a href="#usage"><i class="fas fa-play-circle"></i> Usage</a>
-      <a href="#roles"><i class="fas fa-users"></i> User Roles</a>
-      <a href="#features"><i class="fas fa-star"></i> Features</a>
-      <a href="#layout-visual"><i class="fas fa-map"></i> Layout Plan</a>
-      <a href="#video"><i class="fas fa-video"></i> Tutorial Video</a>
-      <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
-      <a href="#pdf"><i class="fas fa-file-pdf"></i> PDF Export</a>
-      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
-    </nav>
-  </div>
-
-  <div class="content">
-    <section id="intro" class="reveal fade-left">
-      <div class="intro-container">
-        <div class="intro-text">
-          <h1><i class="fas fa-book"></i> Welcome to <span class="brand">TicketPro</span></h1>
-          <p class="lead">A smart vehicle management software built to monitor vehicle entry and exit at entities, control gate barriers, issue digital tickets, generate reports and track operator shifts across multiple locations.</p>
-          <p class="span">Improve transparency, reduce human error, and gain real-time insights—all in one place.</p>
-        </div>
-        <div class="intro-image">
-          <img src="welcome.jpg" alt="TicketPro Dashboard Preview" />
-        </div>
-      </div>
-    </section>
-
-    <section id="install" class="reveal fade-right">
-      <h1><i class="fas fa-download"></i> Installation & Setup</h1>
-      <p>Our experienced technical team will handle the complete installation and deployment of <strong>TicketPro</strong> on your preferred server infrastructure. This includes setting up the backend environment, configuring the software, and ensuring seamless integration with your entry and exit systems.</p>
-      <p>You won’t need to worry about any technical complexities — from database configuration to barrier control setup, everything will be handled efficiently by our professionals. We’ll also ensure the system is tested, secured, and ready for operational use.</p>
-    </section>
-
-    <section id="usage" class="reveal zoom-in">
-      <h1><i class="fas fa-play-circle"></i> Usage Guide</h1>
-      <p>Login with your credentials. Navigate using the hamburger menu. Entry and Exit officers use the respective dashboards to admit or release vehicles. Managers and Admins access broader features like announcements, settings, backups, and full reports.</p>
-      <p>Operators can print receipts, open barriers (when configured), and review daily activity logs.</p>
-    </section>
-
-    <section id="roles" class="reveal fade-left">
-      <h1><i class="fas fa-users"></i> User Roles</h1>
-      <div class="card-grid">
-        <div class="role-card admin">
-          <i class="fas fa-user-shield"></i>
-          <h3>Administrator</h3>
-          <p>Full control including entity creation, user transfer, and backups.</p>
-        </div>
-        <div class="role-card manager">
-          <i class="fas fa-user-tie"></i>
-          <h3>Manager</h3>
-          <p>Oversees operations in a specific entity, approves shifts, views statistics and reports.</p>
-        </div>
-        <div class="role-card officer">
-          <i class="fas fa-user-check"></i>
-          <h3>Park Officer</h3>
-          <p>Handles entry/exit gates with scoped access to ticketing and monitoring only.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="features" class="reveal fade-right features-section">
-      <h1><i class="fas fa-star"></i> Key Features</h1>
-      <ul class="feature-list">
-        <li><i class="fas fa-ticket-alt"></i><span>Vehicle ticket issuance and receipts</span></li>
-        <li><i class="fas fa-clock"></i><span>Shift tracking and reporting</span></li>
-        <li><i class="fas fa-user-shield"></i><span>Role-based access with entity-specific data</span></li>
-        <li><i class="fas fa-chart-line"></i><span>Sales summaries, daily logs, and history</span></li>
-        <li><i class="fas fa-bullhorn"></i><span>Announcement system for staff</span></li>
-        <li><i class="fas fa-tools"></i><span>System maintenance: delete, backup, and restore</span></li>
-        <li><i class="fas fa-file-pdf"></i><span>Supports PDF export of reports and settings</span></li>
-        <li><i class="fas fa-coins"></i><span>Automatic additional fee for overstayed vehicles</span></li>
-      </ul>
-    </section>
-
-    <section id="layout-visual" class="reveal fade-in">
-      <h1><i class="fas fa-map-marked-alt"></i> Layout Plan</h1>
-      <p>This 3D visual illustration shows the proposed layout for how TicketPro will operate at the entrance and exit gate, including cubicle placement,barrier positioning along with a schematic overview of system communication between gates and the admin office..</p>
-      <div class="layout-flex-container">
-        <figure class="layout-item">
-          <h3><i class="fas fa-arrow-right"></i> Entrance Gate Layout</h3>
-          <img src="entrance-plan.png" alt="3D Entrance Layout">
-          <figcaption>3D visual showing cubicle and barrier setup at the Entrance Gate.</figcaption>
-          <ol class="animated-steps">
-            <li style="--i:1;"><i class="fas fa-arrow-right step-icon"></i> Vehicle approaches the entrance gate.</li>
-            <li style="--i:2;"><i class="fas fa-arrow-right step-icon"></i> Motorist is informed of the ticket price and makes payment.</li>
-            <li style="--i:3;"><i class="fas fa-arrow-right step-icon"></i> Ticket is generated and issued to the driver.</li>
-            <li style="--i:4;"><i class="fas fa-arrow-right step-icon"></i> TicketPro sends a signal to the barrier system.</li>
-            <li style="--i:5;"><i class="fas fa-arrow-right step-icon"></i> Boom barrier opens automatically.</li>
-            <li style="--i:6;"><i class="fas fa-arrow-right step-icon"></i> Vehicle enters the premises.</li>
-          </ol>
-        </figure>
-        <figure class="layout-item">
-          <h3><i class="fas fa-arrow-left"></i> Exit Gate Layout</h3>
-          <img src="exit-plan.png" alt="3D Exit Layout">
-          <figcaption>3D visual showing cubicle and barrier setup at the Exit Gate.</figcaption>
-          <ol class="animated-steps">
-            <li style="--i:1;"><i class="fas fa-arrow-left step-icon"></i> Vehicle approaches the exit gate.</li>
-            <li style="--i:2;"><i class="fas fa-arrow-left step-icon"></i> Operator scans or verifies the issued Ticket.</li>
-            <li style="--i:3;"><i class="fas fa-arrow-left step-icon"></i> System confirms exit eligibility and time.</li>
-            <li style="--i:4;"><i class="fas fa-arrow-left step-icon"></i> Any pending payment is settled if applicable.</li>
-            <li style="--i:5;"><i class="fas fa-arrow-left step-icon"></i> TicketPro opens the boom barrier automatically.</li>
-            <li style="--i:6;"><i class="fas fa-arrow-left step-icon"></i> Vehicle exits the premises and system logs the exit.</li>
-          </ol>
-        </figure>
-        <figure class="layout-item">
-          <h3><i class="fas fa-project-diagram"></i> System Communication Diagram</h3>
-          <img src="schematic.png" alt="TicketPro Operation Diagram">
-          <figcaption>Diagram showing how Entrance/Exit Gates communicate with the Admin Office via the TicketPro server.</figcaption>
-          <ol class="animated-steps">
-            <li style="--i:1;"><i class="fas fa-arrow-down step-icon"></i> TicketPro server is hosted in the Admin/Manager's Office.</li>
-            <li style="--i:2;"><i class="fas fa-arrow-down step-icon"></i> Entrance/Exit cubicles are connected via network (LAN or Wi-Fi).</li>
-            <li style="--i:3;"><i class="fas fa-arrow-down step-icon"></i> Admin monitors entry/exit logs and operator activities in real-time.</li>
-            <li style="--i:4;"><i class="fas fa-arrow-down step-icon"></i> Reports, access logs, and ticket data sync continuously to the server.</li>
-            <li style="--i:5;"><i class="fas fa-arrow-down step-icon"></i> Admin can remotely generate reports, update ticket prices or block access.</li>
-          </ol>
-        </figure>
-      </div>
-    </section>
-
-    <section id="pdf" class="reveal fade-left">
-      <h1><i class="fas fa-file-pdf"></i> Download Documentation PDF</h1>
-      <p>You can download the complete documentation as a PDF file for offline use.</p>
-      <a href="TicketPro_Documentation.pdf" download class="theme-toggle" style="color: rgb(146, 145, 145);">
-        <i class="fas fa-file-pdf"></i> Download PDF
-      </a>
-    </section><br>
-
-    <section id="video" class="reveal fade-left">
-      <div class="video-container" onclick="togglePlay(this)">
-        <video id="tutorialVideo" poster="thumbnail.png" controls>
-          <source src="https://drive.google.com/file/d/1Pu61kZX61fcMW9GDtr6nKamo3xw3VYDI/view?usp=sharing" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <a href="check_back.html" class="custom-toggle-btn play-button"><i class="fas fa-play"></i></a>
-      </div>
-      <p>If you don’t see the video, <a href="check_back.html" style="color: rgb(146, 145, 145);">click here to view or download</a>.</p>
-    </section>
-
-    <section id="faq" class="reveal zoom-in faq-section">
-  <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <i class="fas fa-laptop-house"></i> Can I run this offline?
-        <span class="accordion-icon">+</span>
-      </button>
-      <div class="accordion-body">
-        <p>Yes, it works seamlessly on any local web server like XAMPP.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <i class="fas fa-database"></i> Does it support backups?
-        <span class="accordion-icon">+</span>
-      </button>
-      <div class="accordion-body">
-        <p>Yes, you can export and restore databases directly from the system maintenance section.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button class="accordion-header">
-        <i class="fas fa-money-bill-wave"></i> How do I change ticket prices?
-        <span class="accordion-icon">+</span>
-      </button>
-      <div class="accordion-body">
-        <p>Managers and Admins can update ticket pricing from the Settings page based on entity configurations.</p>
-      </div>
-    </div>
-  </div>
-</section><br>
-
-
-    <section id="contact" class="reveal fade-right contact-section">
-  <h1><i class="fas fa-envelope"></i> Contact Support</h1>
-  <div class="contact-grid">
-    <div class="contact-box">
-      <i class="fas fa-envelope-open-text"></i>
-      <a href="mailto:michellenetruce@gmail.com">michellenetruce@gmail.com</a>
-    </div>
-    <div class="contact-box">
-      <i class="fas fa-phone-alt"></i>
-      <p>+234 813 970 9869</p>
-    </div>
-    <div class="contact-box">
-      <i class="fab fa-whatsapp"></i>
-      <a href="https://wa.me/2347045305094" target="_blank">WhatsApp Chat</a>
-    </div>
-  </div>
-</section>
-
-
-    <footer class="footer-gradient">
-    <div class="footer-container">
-
-      <div class="footer-grid">
+  <body>
+    <div class="top-header">
+      <div class="header-brand">
         <div>
-          <h4>Explore</h4>
-          <a href="#intro">Home</a>
-          <a href="#features">Features</a>
-          <a href="#roles">User Roles</a>
-          <a href="#layout-visual">Layout Plan</a>
+          <img src="title-icon.png" alt="TicketPro Logo" class="header-logo" />
         </div>
-        <div>
-          <h4>Resources</h4>
-          <a href="#faq">FAQ</a>
-          <a href="#pdf">Download PDF</a>
-          <a href="#video">Tutorial Video</a>
-          <a href="#contact">Contact</a>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <div class="footer-socials">
-            <a href="https://web.facebook.com/profile.php?id=100083129598961" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-x-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/michael-adeyemi-51a435230/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://wa.me/2347045305094" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <h2>TicketPro</h2>
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <div class="sidebar" id="sidebar">
+      <br /><br />
+      <input type="text" class="search-input" id="searchBox" placeholder="Search documentation..." />
+      <div id="noResults" style="padding: 0.5rem; font-size: 0.9rem; color: crimson; display: none;">
+        No match found.
+      </div>
+      <nav id="docLinks">
+        <a href="#intro"><i class="fas fa-book"></i> Introduction</a>
+        <a href="#install"><i class="fas fa-download"></i> Installation</a>
+        <a href="#usage"><i class="fas fa-play-circle"></i> Usage</a>
+        <a href="#roles"><i class="fas fa-users"></i> User Roles</a>
+        <a href="#features"><i class="fas fa-star"></i> Features</a>
+        <a href="#layout-visual"><i class="fas fa-map"></i> Layout Plan</a>
+        <a href="#video"><i class="fas fa-video"></i> Tutorial Video</a>
+        <a href="#faq"><i class="fas fa-question-circle"></i> FAQ</a>
+        <a href="#pdf"><i class="fas fa-file-pdf"></i> PDF Export</a>
+        <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+      </nav>
+    </div>
+
+    <div class="content">
+          <section id="intro" class="reveal fade-left">
+            <div class="intro-container">
+              <div class="intro-text">
+                <h1><i class="fas fa-book"></i> Welcome to <span class="brand">TicketPro</span></h1>
+                <p class="lead">A smart vehicle management software built to monitor vehicle entry and exit at entities, control gate barriers, issue digital tickets, generate reports and track operator shifts across multiple locations.</p>
+                <p class="span">Improve transparency, reduce human error, and gain real-time insights—all in one place.</p>
+              </div>
+              <div class="intro-image">
+                <img src="welcome.jpg" alt="TicketPro Dashboard Preview" />
+              </div>
+            </div>
+          </section>
+
+          <section id="install" class="reveal fade-right">
+            <h1><i class="fas fa-download"></i> Installation & Setup</h1>
+            <p>Our experienced technical team will handle the complete installation and deployment of <strong>TicketPro</strong> on your preferred server infrastructure. This includes setting up the backend environment, configuring the software, and ensuring seamless integration with your entry and exit systems.</p>
+            <p>You won’t need to worry about any technical complexities — from database configuration to barrier control setup, everything will be handled efficiently by our professionals. We’ll also ensure the system is tested, secured, and ready for operational use.</p>
+          </section>
+
+          <section id="usage" class="reveal zoom-in">
+            <h1><i class="fas fa-play-circle"></i> Usage Guide</h1>
+            <p>Login with your credentials. Navigate using the hamburger menu. Entry and Exit officers use the respective dashboards to admit or release vehicles. Managers and Admins access broader features like announcements, settings, backups, and full reports.</p>
+            <p>Operators can print receipts, open barriers (when configured), and review daily activity logs.</p>
+          </section>
+
+          <section id="roles" class="reveal fade-left">
+            <h1><i class="fas fa-users"></i> User Roles</h1>
+            <div class="card-grid">
+              <div class="role-card admin">
+                <i class="fas fa-user-shield"></i>
+                <h3>Administrator</h3>
+                <p>Full control including entity creation, user transfer, and backups.</p>
+              </div>
+              <div class="role-card manager">
+                <i class="fas fa-user-tie"></i>
+                <h3>Manager</h3>
+                <p>Oversees operations in a specific entity, approves shifts, views statistics and reports.</p>
+              </div>
+              <div class="role-card officer">
+                <i class="fas fa-user-check"></i>
+                <h3>Park Officer</h3>
+                <p>Handles entry/exit gates with scoped access to ticketing and monitoring only.</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="features" class="reveal fade-right features-section">
+            <h1><i class="fas fa-star"></i> Key Features</h1>
+            <ul class="feature-list">
+              <li><i class="fas fa-ticket-alt"></i><span>Vehicle ticket issuance and receipts</span></li>
+              <li><i class="fas fa-clock"></i><span>Shift tracking and reporting</span></li>
+              <li><i class="fas fa-user-shield"></i><span>Role-based access with entity-specific data</span></li>
+              <li><i class="fas fa-chart-line"></i><span>Sales summaries, daily logs, and history</span></li>
+              <li><i class="fas fa-bullhorn"></i><span>Announcement system for staff</span></li>
+              <li><i class="fas fa-tools"></i><span>System maintenance: delete, backup, and restore</span></li>
+              <li><i class="fas fa-file-pdf"></i><span>Supports PDF export of reports and settings</span></li>
+              <li><i class="fas fa-coins"></i><span>Automatic additional fee for overstayed vehicles</span></li>
+            </ul>
+          </section>
+
+          <section id="layout-visual" class="reveal fade-in">
+            <h1><i class="fas fa-map-marked-alt"></i> Layout Plan</h1>
+            <p>This 3D visual illustration shows the proposed layout for how TicketPro will operate at the entrance and exit gate, including cubicle placement,barrier positioning along with a schematic overview of system communication between gates and the admin office..</p>
+            <div class="layout-flex-container">
+              <figure class="layout-item">
+                <h3><i class="fas fa-arrow-right"></i> Entrance Gate Layout</h3>
+                <img src="entrance-plan.png" alt="3D Entrance Layout">
+                <figcaption>3D visual showing cubicle and barrier setup at the Entrance Gate.</figcaption>
+                <ol class="animated-steps">
+                  <li style="--i:1;"><i class="fas fa-arrow-right step-icon"></i> Vehicle approaches the entrance gate.</li>
+                  <li style="--i:2;"><i class="fas fa-arrow-right step-icon"></i> Motorist is informed of the ticket price and makes payment.</li>
+                  <li style="--i:3;"><i class="fas fa-arrow-right step-icon"></i> Ticket is generated and issued to the driver.</li>
+                  <li style="--i:4;"><i class="fas fa-arrow-right step-icon"></i> TicketPro sends a signal to the barrier system.</li>
+                  <li style="--i:5;"><i class="fas fa-arrow-right step-icon"></i> Boom barrier opens automatically.</li>
+                  <li style="--i:6;"><i class="fas fa-arrow-right step-icon"></i> Vehicle enters the premises.</li>
+                </ol>
+              </figure>
+              <figure class="layout-item">
+                <h3><i class="fas fa-arrow-left"></i> Exit Gate Layout</h3>
+                <img src="exit-plan.png" alt="3D Exit Layout">
+                <figcaption>3D visual showing cubicle and barrier setup at the Exit Gate.</figcaption>
+                <ol class="animated-steps">
+                  <li style="--i:1;"><i class="fas fa-arrow-left step-icon"></i> Vehicle approaches the exit gate.</li>
+                  <li style="--i:2;"><i class="fas fa-arrow-left step-icon"></i> Operator scans or verifies the issued Ticket.</li>
+                  <li style="--i:3;"><i class="fas fa-arrow-left step-icon"></i> System confirms exit eligibility and time.</li>
+                  <li style="--i:4;"><i class="fas fa-arrow-left step-icon"></i> Any pending payment is settled if applicable.</li>
+                  <li style="--i:5;"><i class="fas fa-arrow-left step-icon"></i> TicketPro opens the boom barrier automatically.</li>
+                  <li style="--i:6;"><i class="fas fa-arrow-left step-icon"></i> Vehicle exits the premises and system logs the exit.</li>
+                </ol>
+              </figure>
+              <figure class="layout-item">
+                <h3><i class="fas fa-project-diagram"></i> System Communication Diagram</h3>
+                <img src="schematic.png" alt="TicketPro Operation Diagram">
+                <figcaption>Diagram showing how Entrance/Exit Gates communicate with the Admin Office via the TicketPro server.</figcaption>
+                <ol class="animated-steps">
+                  <li style="--i:1;"><i class="fas fa-arrow-down step-icon"></i> TicketPro server is hosted in the Admin/Manager's Office.</li>
+                  <li style="--i:2;"><i class="fas fa-arrow-down step-icon"></i> Entrance/Exit cubicles are connected via network (LAN or Wi-Fi).</li>
+                  <li style="--i:3;"><i class="fas fa-arrow-down step-icon"></i> Admin monitors entry/exit logs and operator activities in real-time.</li>
+                  <li style="--i:4;"><i class="fas fa-arrow-down step-icon"></i> Reports, access logs, and ticket data sync continuously to the server.</li>
+                  <li style="--i:5;"><i class="fas fa-arrow-down step-icon"></i> Admin can remotely generate reports, update ticket prices or block access.</li>
+                </ol>
+              </figure>
+            </div>
+          </section>
+
+          <section id="pdf" class="reveal fade-left">
+            <h1><i class="fas fa-file-pdf"></i> Download Documentation PDF</h1>
+            <p>You can download the complete documentation as a PDF file for offline use.</p>
+            <a href="TicketPro_Documentation.pdf" download class="theme-toggle" style="color: rgb(146, 145, 145);">
+              <i class="fas fa-file-pdf"></i> Download PDF
+            </a>
+          </section><br>
+
+          <section id="video" class="reveal fade-left">
+            <div class="video-container" onclick="togglePlay(this)">
+              <video id="tutorialVideo" poster="thumbnail.png" controls>
+                <source src="https://drive.google.com/file/d/1Pu61kZX61fcMW9GDtr6nKamo3xw3VYDI/view?usp=sharing" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <a href="check_back.html" class="custom-toggle-btn play-button"><i class="fas fa-play"></i></a>
+            </div>
+            <p>If you don’t see the video, <a href="check_back.html" style="color: rgb(146, 145, 145);">click here to view or download</a>.</p>
+          </section>
+
+          <section id="faq" class="reveal zoom-in faq-section">
+        <h1><i class="fas fa-question-circle"></i> Frequently Asked Questions</h1>
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-laptop-house"></i> Can I run this offline?
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes, it works seamlessly on any local web server like XAMPP.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-database"></i> Does it support backups?
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Yes, you can export and restore databases directly from the system maintenance section.</p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <i class="fas fa-money-bill-wave"></i> How do I change ticket prices?
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="accordion-body">
+              <p>Managers and Admins can update ticket pricing from the Settings page based on entity configurations.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section><br>
 
-      <div class="footer-brand footer-bottom-brand">
-        <img src="title-icon.png" alt="TicketPro Logo" class="footer-logo" />
-        <div>
-          <h2>TicketPro</h2>
-          <p>Smart vehicle entry & exit management for modern businesses.</p>
+      <section id="contact" class="reveal fade-right contact-section">
+        <h1><i class="fas fa-envelope"></i> Contact Support</h1>
+        <div class="contact-grid">
+          <div class="contact-box">
+            <i class="fas fa-envelope-open-text"></i>
+            <a href="mailto:michellenetruce@gmail.com">michellenetruce@gmail.com</a>
+          </div>
+          <div class="contact-box">
+            <i class="fas fa-phone-alt"></i>
+            <p>+234 813 970 9869</p>
+          </div>
+          <div class="contact-box">
+            <i class="fab fa-whatsapp"></i>
+            <a href="https://wa.me/2347045305094" target="_blank">WhatsApp Chat</a>
+          </div>
         </div>
+      </section>
+
+      <footer class="footer-gradient">
+        <div class="footer-container">
+          <div class="footer-grid">
+            <div>
+              <h4>Explore</h4>
+              <a href="#intro">Home</a>
+              <a href="#features">Features</a>
+              <a href="#roles">User Roles</a>
+              <a href="#layout-visual">Layout Plan</a>
+            </div>
+            <div>
+              <h4>Resources</h4>
+              <a href="#faq">FAQ</a>
+              <a href="#pdf">Download PDF</a>
+              <a href="#video">Tutorial Video</a>
+              <a href="#contact">Contact</a>
+            </div>
+            <div>
+              <h4>Connect</h4>
+              <div class="footer-socials">
+                <a href="https://web.facebook.com/profile.php?id=100083129598961" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/michael-adeyemi-51a435230/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://wa.me/2347045305094" target="_blank"><i class="fab fa-whatsapp"></i></a>
+              </div>
+              <div style="margin-top: 1rem;">
+                <button class="appearance-btn" onclick="openAppearanceModal()">
+                  <i class="fas fa-adjust" style="margin-right: 0.5rem;"></i>
+                  Appearance Setting
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-brand footer-bottom-brand">
+            <img src="title-icon.png" alt="TicketPro Logo" class="footer-logo" />
+            <div>
+              <h2>TicketPro</h2>
+              <p>Smart vehicle entry & exit management for modern businesses.</p>
+            </div>
+          </div>
+
+          <div class="footer-copy">
+            &copy; <span id="year"></span> TicketPro by Michellene PowerTech. All rights reserved.
+          </div>
+        </div>
+
+        <div id="appearanceModal" class="theme-modal">
+          <div class="theme-modal-content">
+            <h3>Choose Theme</h3>
+            <button onclick="setTheme('auto')">Use Browser Setting</button>
+            <button onclick="setTheme('light')">Light</button>
+            <button onclick="setTheme('dark')">Dark</button>
+            <button class="close-modal" onclick="closeAppearanceModal()">Close</button>
+          </div>
+        </div>
+      </footer>
+
+      <div id="didYouKnowOverlay"></div>
+
+      <div id="didYouKnowPopup" class="did-you-know-popup">
+        <h3><i class="fas fa-lightbulb"></i> Did You Know?</h3>
+        <p>If just 150 cars pay ₦200 daily for parking in a business area or mall, that adds up to ₦10,950,000 in revenue every year.</p>
+        <button onclick="dismissDidYouKnow()">Got It</button>
       </div>
 
-      <div class="footer-copy">
-        &copy; <span id="year"></span> TicketPro by Michellene PowerTech. All rights reserved.
+      <div id="didYouKnowIcon" class="did-you-know-icon" onclick="reopenDidYouKnow()" title="Did You Know?">
+        <i class="fas fa-lightbulb"></i>
       </div>
-
     </div>
-</footer>
-  </div>
 
-  <div id="didYouKnowOverlay"></div>
+    <script src="index.js"></script>
+    <script>
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        applyTheme(savedTheme);
+      } else {
+        applyTheme('auto');
+      }
 
-  <div id="didYouKnowPopup" class="did-you-know-popup">
-    <h3><i class="fas fa-lightbulb"></i> Did You Know?</h3>
-    <p>If just 150 cars pay ₦200 daily for parking in a business area or mall, that adds up to ₦10,950,000 in revenue every year.</p>
-    <button onclick="dismissDidYouKnow()">Got It</button>
-  </div>
+      function openAppearanceModal() {
+        document.getElementById('appearanceModal').style.display = 'block';
+      }
 
-  <div id="didYouKnowIcon" class="did-you-know-icon" onclick="reopenDidYouKnow()" title="Did You Know?">
-    <i class="fas fa-lightbulb"></i>
-  </div>
+      function closeAppearanceModal() {
+        document.getElementById('appearanceModal').style.display = 'none';
+      }
 
-  <script src="index.js"></script>
-</body>
+      function setTheme(theme) {
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+        closeAppearanceModal();
+      }
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else if (theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        }
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'auto') {
+          applyTheme('auto');
+        }
+      });
+    </script>
+  </body>
 </html>
