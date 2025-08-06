@@ -13,6 +13,7 @@
 --content-h1: linear-gradient(90deg, #4d7c0f, #0369a1);
 --footer-copy: #606264;
 --footer-border-top: rgba(105, 103, 103, 0.308);
+--theme: #b9c5d6;
 
 
 }
@@ -31,6 +32,7 @@
   --content-h1: linear-gradient(90deg, #ceee3f, #0ea5e9);
   --footer-copy: #94a3b8;
   --footer-border-top: rgba(255, 255, 255, 0.08);
+  --theme: #0f172a;
 }
 
 html,
