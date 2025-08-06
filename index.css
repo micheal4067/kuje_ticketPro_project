@@ -9,7 +9,12 @@
   --content-box: #ffffff;
   --contact-box: rgba(243, 244, 246, 0.8);  
   --contact-section: linear-gradient(to right, #e0f2fe, #f0f9ff); 
-  --footer-gradient: linear-gradient(135deg, #e0e7ff, #f8fafc); /
+--footer-gradient: linear-gradient(135deg, #cbd5e1, #94a3b8);
+--content-h1: linear-gradient(90deg, #4d7c0f, #0369a1);
+--footer-copy: #606264;
+--footer-border-top: rgba(105, 103, 103, 0.308);
+
+
 }
 
 
@@ -23,6 +28,9 @@
   --contact-box: rgba(255, 255, 255, 0.05);
   --contact-section: linear-gradient(to right, #0f172a, #1e293b);
   --footer-gradient:linear-gradient(135deg, #0f172a, #1e293b);
+  --content-h1: linear-gradient(90deg, #ceee3f, #0ea5e9);
+  --footer-copy: #94a3b8;
+  --footer-border-top: rgba(255, 255, 255, 0.08);
 }
 
 html,
@@ -251,7 +259,7 @@ body {
 .content h1 {
   font-size: 2.2rem;
   margin-bottom: 1.2rem;
-  background: linear-gradient(90deg, #ceee3f, #0ea5e9);
+  background: var(--content-h1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -279,14 +287,14 @@ body {
 .intro-text .lead {
   font-size: 1.1rem;
   font-weight: 500;
-  color: rgb(156, 156, 156);
+  color: var(--text);
   margin-bottom: 1rem;
    margin-left: 0;
 }
 
  .content #intro .intro-text .span{
   margin-left: 0;
-  color: var(--text);
+  color: var(--footer-copy);
 }
 
 .intro-image img {
@@ -741,7 +749,7 @@ body.no-scroll {
 
 .footer-grid a {
   display: block;
-  color: #94a3b8;
+  color: var(--footer-copy);
   font-size: 0.95rem;
   text-decoration: none;
   margin-bottom: 0.5rem;
@@ -760,7 +768,7 @@ body.no-scroll {
 }
 
 .footer-socials a {
-  color: #94a3b8;
+  color: var(--footer-copy);
   font-size: 1.25rem;
   transition: color 0.3s ease;
 }
@@ -772,8 +780,8 @@ body.no-scroll {
 .footer-copy {
   text-align: center;
   font-size: 0.85rem;
-  color: #94a3b8;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--footer-copy);
+  border-top: 1px solid var(--footer-border-top);
   padding-top: 1.5rem;
   margin-top: 2rem;
 }
