@@ -669,7 +669,7 @@ body.no-scroll {
 .footer-gradient {
   background: var(--box-content);
   color: var(--text);
-  padding: 4rem 2rem 0;
+  padding: 4rem 1.5rem 0;
   font-family: 'Inter', 'Raleway', sans-serif;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -790,9 +790,10 @@ body.no-scroll {
   color: var(--footer-copy);
   border-top: 1px solid var(--footer-border-top);
   height: 5.5rem;
-  padding-top: 1rem;
+  padding: 1rem;
   margin-top: 2rem;
   background: var(--header);
+  
 }
 
 .search-input {
