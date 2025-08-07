@@ -126,20 +126,13 @@ body {
 }
 
 #install {
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   background: var(--bg);
   border-radius: 12px;
   margin-top: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
-#install h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
 
 #install .content-wrapper {
   display: flex;
