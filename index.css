@@ -10,12 +10,13 @@
   --contact-box: rgba(243, 244, 246, 0.8);  
   --contact-section: linear-gradient(to right, #e0f2fe, #f0f9ff); 
 --footer-gradient: linear-gradient(135deg, #cbd5e1, #94a3b8);
---content-h1: black;
+--content-h1: linear-gradient(to right, #4f46e5, #9333ea);
 --footer-copy: #606264;
 --footer-border-top: rgba(105, 103, 103, 0.308);
 --theme: #b9c5d6;
 --header: #292929 ;
 --box-content: white;
+--span: linear-gradient(90deg, #ceee3f, #0ea5e9);
 
 
 }
@@ -37,6 +38,7 @@
   --footer-border-top: rgba(255, 255, 255, 0.08);
   --theme: #0f172a;
   --box-content: linear-gradient(135deg, #0f172a, #1e293b);
+  --span: linear-gradient(to right, #4f46e5, #9333ea);
 }
 
 html,
@@ -127,7 +129,7 @@ body {
 
 #install {
   padding: 2rem 0;
-  background: var(--bg);
+  background: linear-gradient(to right, #4f46e5, #9333ea);
   border-radius: 12px;
   margin-top: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
@@ -145,7 +147,8 @@ body {
   flex: 1 1 400px;
   font-size: 1rem;
   line-height: 1.7;
-  color: var(--text);
+  color: white;
+  padding-right: 1rem;
 }
 
 .install-slider {
@@ -154,7 +157,7 @@ body {
   border-radius: 10px;
   flex: 1 1 500px;
   height: 300px;
-  background: #cbd5e1;
+  background: linear-gradient(to right, #5c56d1, #a55aec);
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -372,7 +375,7 @@ body {
 
 .intro-text h1 .brand {
   color: var(--primary, #4f46e5);
-  background: linear-gradient(to right, #4f46e5, #9333ea);
+  background: var(--span);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -877,7 +880,7 @@ body.no-scroll {
 .footer-copy {
   text-align: center;
   font-size: 0.85rem;
-  color: rgb(36, 77, 209);
+  color: rgb(220, 223, 231);
   border-top: 1px solid var(--footer-border-top);
   height: 5.5rem;
   padding: 1rem;
