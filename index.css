@@ -125,7 +125,102 @@ body {
   border-radius: 6px;
 }
 
+#install {
+  padding: 2rem 1rem;
+  background: var(--bg);
+  border-radius: 12px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
 
+#install h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+#install .content-wrapper {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#install .content-wrapper > div:first-child {
+  flex: 1 1 400px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.install-slider {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  flex: 1 1 500px;
+  height: 300px;
+  background: #cbd5e1;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+
+.slide {
+  flex: 0 0 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(15, 23, 42, 0.6);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 0.5rem 0.7rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  z-index: 2;
+  transition: background 0.3s;
+}
+
+.slider-btn:hover {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 900px) {
+  #install .content-wrapper {
+    flex-direction: column;
+  }
+
+  .install-slider {
+    width: 100%;
+    height: 250px;
+  }
+}
 
 .card-grid {
   display: grid;
@@ -222,15 +317,13 @@ body {
   font-size: 0.95rem;
 }
 
-/* Optional: Open State */
 .accordion-item.open .accordion-body {
-  max-height: 500px; /* enough to show all content */
+  max-height: 500px;
 }
 
 .accordion-item.open .accordion-icon {
   transform: rotate(45deg);
 }
-
 
 .sidebar nav a {
   display: block;
@@ -791,7 +884,7 @@ body.no-scroll {
 .footer-copy {
   text-align: center;
   font-size: 0.85rem;
-  color: var(--footer-copy);
+  color: rgb(36, 77, 209);
   border-top: 1px solid var(--footer-border-top);
   height: 5.5rem;
   padding: 1rem;

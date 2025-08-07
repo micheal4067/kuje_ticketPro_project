@@ -65,10 +65,31 @@
           </section>
 
           <section id="install" class="reveal fade-right">
-            <h1><i class="fas fa-download"></i> Installation & Setup</h1>
-            <p>Our experienced technical team will handle the complete installation and deployment of <strong>TicketPro</strong> on your preferred server infrastructure. This includes setting up the backend environment, configuring the software, and ensuring seamless integration with your entry and exit systems.</p>
-            <p>You won’t need to worry about any technical complexities — from database configuration to barrier control setup, everything will be handled efficiently by our professionals. We’ll also ensure the system is tested, secured, and ready for operational use.</p>
-          </section>
+          <h1><i class="fas fa-download"></i> Installation & Setup</h1>
+
+          <div class="content-wrapper">
+            <div>
+              <p>Our experienced technical team will handle the complete installation and deployment of <strong>TicketPro</strong> on your preferred server infrastructure. This includes setting up the backend environment, configuring the software, and ensuring seamless integration with your entry and exit systems.</p>
+              <p>You won’t need to worry about any technical complexities — from database configuration to barrier control setup, everything will be handled efficiently by our professionals. We’ll also ensure the system is tested, secured, and ready for operational use.</p>
+            </div>
+
+            <div class="install-slider" onmouseover="pauseSlider()" onmouseout="resumeSlider()">
+              <div class="slider-wrapper" id="sliderWrapper">
+                <div class="slide">
+                  <img src="install.png" alt="Installation in progress" />
+                </div>
+                <div class="slide">
+                  <img src="installations.png" alt="Team configuring hardware" />
+                </div>
+              </div>
+
+              <!-- Controls -->
+              <button class="slider-btn prev" onclick="prevSlide()"><i class="fas fa-chevron-left"></i></button>
+              <button class="slider-btn next" onclick="nextSlide()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </section>
+
 
           <section id="usage" class="reveal zoom-in">
             <h1><i class="fas fa-play-circle"></i> Usage Guide</h1>
@@ -338,6 +359,32 @@
           applyTheme('auto');
         }
       });
+
+       let currentSlide = 0;
+  let sliderInterval = setInterval(nextSlide, 5000);
+
+  function showSlide(index) {
+    const wrapper = document.getElementById("sliderWrapper");
+    const totalSlides = wrapper.children.length;
+    currentSlide = (index + totalSlides) % totalSlides;
+    wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function pauseSlider() {
+    clearInterval(sliderInterval);
+  }
+
+  function resumeSlider() {
+    sliderInterval = setInterval(nextSlide, 5000);
+  }
     </script>
   </body>
 </html>
