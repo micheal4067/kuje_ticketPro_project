@@ -129,7 +129,8 @@ body {
 
 #install {
   padding: 2rem 0;
-  background: linear-gradient(to right, #4f46e5, #9333ea);
+  background: var(--header);
+  border-radius: 12px;
   margin-top: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
@@ -160,7 +161,7 @@ body {
   border-radius: 10px;
   flex: 1 1 500px;
   height: 300px;
-  background: linear-gradient(to right, #5c56d1, #a55aec);
+  background: var(--header);
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -429,7 +430,6 @@ body {
 
 .features-section h1 {
   font-size: 2rem;
-  color: #1e293b;
   text-align: center;
   margin-bottom: 1.5rem;
 }
