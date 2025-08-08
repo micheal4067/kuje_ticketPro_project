@@ -363,18 +363,41 @@ body {
   color: var(--content-h1);
 }
 
-.intro-container {
+
+
+/* INTRO SECTION */
+#intro {
+  min-height: 100vh; /* Full screen height on large screens */
   display: flex;
-  flex-direction: column-reverse;
   align-items: center;
-  gap: 2rem;
+  justify-content: center;
+  padding: 3rem 0;
+  color: var(--text, #ffffff);
 }
 
+#intro p{
+  margin-left: 0;
+}
+
+/* Container layout */
+.intro-container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+/* Text Styling */
 .intro-text {
   max-width: 700px;
   text-align: center;
 }
 
+.intro-text h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
 
 .intro-text h1 .brand {
   color: var(--primary, #4f46e5);
@@ -384,25 +407,26 @@ body {
 }
 
 .intro-text .lead {
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.25rem;
   color: var(--text);
   margin-bottom: 1rem;
-   margin-left: 0;
 }
 
- .content #intro .intro-text .span{
-  margin-left: 0;
-  color: var(--footer-copy);
+.intro-text .span {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--footer-copy, #94a3b8);
 }
 
+/* Image Styling */
 .intro-image img {
   max-width: 100%;
   height: auto;
   border-radius: 1rem;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* Large Screens */
 @media (min-width: 1068px) {
   .intro-container {
     flex-direction: row;
@@ -411,12 +435,33 @@ body {
   .intro-text {
     text-align: left;
   }
-  #intro {
-  padding: 1rem 1rem;
-  color: white;
+  .intro-text h1 {
+    font-size: 3.2rem; /* Bigger heading on large screens */
+  }
+  .intro-text .lead {
+    font-size: 1.4rem;
+  }
+  .intro-text .span {
+    font-size: 1.2rem;
+  }
 }
 
+/* Small Screens */
+@media (max-width: 992px) {
+  #intro {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .intro-text h1 {
+    padding-top: 1rem;
+    font-size: 2rem;
+  }
 }
+
 
 .features-section {
   padding: 2rem;
