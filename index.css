@@ -51,6 +51,7 @@ body {
   display: flex;
   min-height: 100vh;
   min-width: 300px;
+  max-width: 1700px;
 }
 
 *, *::before, *::after {
@@ -129,14 +130,13 @@ body {
 
 #install {
   padding: 2rem 0;
-  background: var(--header);
+  background: var(--box-content);
   border-radius: 12px;
-  margin-top: 2rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
  .content #install h1{
-  color: white;
+  color: var(--text);
 }
 
 
@@ -151,7 +151,7 @@ body {
   flex: 1 1 400px;
   font-size: 1rem;
   line-height: 1.7;
-  color: white;
+  color: var(--text);
   padding-right: 1rem;
 }
 
