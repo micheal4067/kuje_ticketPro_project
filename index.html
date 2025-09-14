@@ -1,30 +1,49 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="var(--theme)" />
-    <title>TicketPro Docs</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="logo.jpg" type="image/png" />
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="var(--theme)" />
+  <title>TicketPro Documentation</title>
+
+  <!-- Open Graph Meta Tags (for social preview) -->
+  <meta property="og:title" content="TicketPro Documentation" />
+  <meta property="og:description" content="Official TicketPro documentation and setup guide. A smart vehicle management software built to monitor vehicle entry and exit at entities, control gate barriers, issue digital tickets, generate reports and track operator shifts across multiple locations." />
+  <meta property="og:image" content="https://micheal4067.github.io/kuje_ticketPro_project/images/welcome.jpg" />
+  <meta property="og:url" content="https://whimsical-kleicha-7ce037.netlify.app/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card (for Twitter/X previews) -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="TicketPro Documentation" />
+  <meta name="twitter:description" content="Learn how TicketPro manages vehicle admission, payments, statistics, and system settings." />
+  <meta name="twitter:image" content="" />
+
+  <!-- Styles & Fonts -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="light-dark.css" />
+  <link rel="stylesheet" href="top-bar.css" />
+  <link rel="stylesheet" href="toggle-side.css" />
+  <link rel="icon" href="images/title-icon.png" type="image/png" />
+</head>
+
 
   <body>
     <div class="top-header">
-      <div class="header-brand">
+      <a href="index.html" class="header-brand">
         <div>
-          <img src="title-icon.png" alt="TicketPro Logo" class="header-logo" />
+          <img src="images/title-icon.png" alt="TicketPro Logo" class="header-logo" />
         </div>
         <h2>TicketPro</h2>
-      </div>
+      </a>
       <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle Menu">
         <i class="fas fa-bars"></i>
       </button>
@@ -50,6 +69,34 @@
       </nav>
     </div>
 
+    <div id="sidebar-overlay" class="sidebar-overlay hidden"></div>
+
+  <!-- Explore Sidebar -->
+  <div id="side_bar" class="side_bar">
+    <nav>
+      <h2 class="sidebar-heading">Explore Features</h2>
+      <ul>
+        <li><a href="entry.html"><i class="fa fa-door-open"></i> Entry Surveillance</a></li>
+        <li><a href="exit.html"><i class="fa fa-door-closed"></i> Exit Surveillance</a></li>
+        <li><a href="payment.html"><i class="fa fa-credit-card"></i> Payment Scheme</a></li>
+        <li><a href="authorize.html"><i class="fa fa-user-shield"></i> Authorization</a></li>
+        <li><a href="announcement.html"><i class="fa fa-bullhorn"></i> Announcement</a></li>
+        <li><a href="daily_sales.html"><i class="fa fa-cash-register"></i> Daily Sales</a></li>
+        <li><a href="record.html"><i class="fa fa-folder-open"></i> Records</a></li>
+        <li><a href="stat.html"><i class="fa fa-chart-line"></i> Statistics</a></li>
+        <li><a href="setting.html"><i class="fa fa-cog"></i> Settings</a></li>
+      </ul>
+    </nav>
+  </div>
+
+    <!-- Toggle Buttons -->
+    <button id="show_sidebar-btn" class="side_bar_toggle">
+      <i class="fa fa-chevron-left"></i>
+    </button>
+    <button id="hide_sidebar-btn" class="side_bar_toggle hidden">
+      <i class="fa fa-chevron-right"></i>
+    </button>
+
     <div class="content">
           <section id="intro" class="reveal fade-left">
             <div class="intro-container">
@@ -59,7 +106,7 @@
                 <p class="span">Improve transparency, reduce human error, and gain real-time insights—all in one place.</p>
               </div>
               <div class="intro-image">
-                <img src="welcome.jpg" alt="TicketPro Dashboard Preview" />
+                <img src="images/welcome.jpg" alt="TicketPro Dashboard Preview" />
               </div>
             </div>
           </section>
@@ -76,14 +123,15 @@
             <div class="install-slider" onmouseover="pauseSlider()" onmouseout="resumeSlider()">
               <div class="slider-wrapper" id="sliderWrapper">
                 <div class="slide">
-                  <img src="3.png" alt="Team configuring hardware" />
+                  <img src="images/3.png" alt="Team configuring hardware" />
                 </div>
                 <div class="slide">
-                  <img src="installations.png" alt="Team configuring barrier" />
+                  <img src="images/installations.png" alt="Team configuring barrier" />
                 </div>
                 <div class="slide">
-                  <img src="installation.jpg" alt="Team setting up electrical" />
+                  <img src="images/installation.jpg" alt="Team setting up electrical" />
                 </div>
+                 
               </div>
 
               <!-- Controls -->
@@ -92,7 +140,6 @@
             </div>
           </div>
         </section><br>
-
 
           <section id="usage" class="reveal zoom-in">
             <h1> Usage Guide</h1>
@@ -141,7 +188,7 @@
             <div class="layout-flex-container">
               <figure class="layout-item">
                 <h3><i class="fas fa-arrow-right"></i> Entrance Gate Layout</h3>
-                <img src="entrance-plan.png" alt="3D Entrance Layout">
+                <img src="images/entrance-plan.png" alt="3D Entrance Layout">
                 <figcaption>3D visual showing cubicle and barrier setup at the Entrance Gate.</figcaption>
                 <ol class="animated-steps">
                   <li style="--i:1;"><i class="fas fa-arrow-right step-icon"></i> Vehicle approaches the entrance gate.</li>
@@ -154,7 +201,7 @@
               </figure>
               <figure class="layout-item">
                 <h3><i class="fas fa-arrow-left"></i> Exit Gate Layout</h3>
-                <img src="exit-plan.png" alt="3D Exit Layout">
+                <img src="images/exit-plan.png" alt="3D Exit Layout">
                 <figcaption>3D visual showing cubicle and barrier setup at the Exit Gate.</figcaption>
                 <ol class="animated-steps">
                   <li style="--i:1;"><i class="fas fa-arrow-left step-icon"></i> Vehicle approaches the exit gate.</li>
@@ -167,7 +214,7 @@
               </figure>
               <figure class="layout-item">
                 <h3><i class="fas fa-project-diagram"></i> System Communication Diagram</h3>
-                <img src="schematic.png" alt="TicketPro Operation Diagram">
+                <img src="images/schematic.png" alt="TicketPro Operation Diagram">
                 <figcaption>Diagram showing how Entrance/Exit Gates communicate with the Admin Office via the TicketPro server.</figcaption>
                 <ol class="animated-steps">
                   <li style="--i:1;"><i class="fas fa-arrow-down step-icon"></i> TicketPro server is hosted in the Admin/Manager's Office.</li>
@@ -190,7 +237,7 @@
 
           <section id="video" class="reveal fade-left">
             <div class="video-container" onclick="togglePlay(this)">
-              <video id="tutorialVideo" poster="thumbnail.png" controls>
+              <video id="tutorialVideo" poster="images/thumbnail.png" controls>
                 <source src="https://drive.google.com/file/d/15A_8K6h1gz7ZZKFQceUJeKHuOpcnFNzy/view?usp=sharing" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
@@ -286,7 +333,7 @@
           </div>
 
           <div class="footer-brand footer-bottom-brand">
-            <img src="title-icon.png" alt="TicketPro Logo" class="footer-logo" />
+            <img src="images/title-icon.png" alt="TicketPro Logo" class="footer-logo" />
             <div>
               <h2>TicketPro</h2>
               <p>Smart vehicle entry & exit management for modern businesses.</p>
@@ -323,71 +370,51 @@
     </div>
 
     <script src="index.js"></script>
-    <script>
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme) {
-        applyTheme(savedTheme);
-      } else {
-        applyTheme('auto');
-      }
+<script>
+const showBtn = document.getElementById("show_sidebar-btn");
+const hideBtn = document.getElementById("hide_sidebar-btn");
+const sidebar = document.getElementById("side_bar");
+const overlay = document.getElementById("sidebar-overlay");
+const menuLinks = sidebar.querySelectorAll("a"); // all sidebar links
+const content = document.querySelector(".content");
 
-      function openAppearanceModal() {
-        document.getElementById('appearanceModal').style.display = 'block';
-      }
+function openSidebar() {
+  sidebar.classList.add("active");
+  overlay.classList.add("active");
+  showBtn.classList.add("hidden");
+  hideBtn.classList.remove("hidden");
+  content.classList.toggle('blur');
+}
 
-      function closeAppearanceModal() {
-        document.getElementById('appearanceModal').style.display = 'none';
-      }
+function closeSidebar() {
+  sidebar.classList.remove("active");
+  overlay.classList.remove("active");
+  hideBtn.classList.add("hidden");
+  showBtn.classList.remove("hidden");
+  content.classList.remove('blur');
+}
 
-      function setTheme(theme) {
-        localStorage.setItem('theme', theme);
-        applyTheme(theme);
-        closeAppearanceModal();
-      }
+showBtn.addEventListener("click", openSidebar);
+hideBtn.addEventListener("click", closeSidebar);
+overlay.addEventListener("click", closeSidebar);
 
-      function applyTheme(theme) {
-        if (theme === 'dark') {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        } else if (theme === 'light') {
-          document.documentElement.setAttribute('data-theme', 'light');
-        } else {
-          const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-          document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-        }
-      }
+// Close sidebar when any link is clicked
+menuLinks.forEach(link => {
+  link.addEventListener("click", closeSidebar);
+});
 
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme === 'auto') {
-          applyTheme('auto');
-        }
-      });
-
-       let currentSlide = 0;
-  let sliderInterval = setInterval(nextSlide, 5000);
-
-  function showSlide(index) {
-    const wrapper = document.getElementById("sliderWrapper");
-    const totalSlides = wrapper.children.length;
-    currentSlide = (index + totalSlides) % totalSlides;
-    wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+// Close when clicking anywhere outside sidebar + toggle buttons
+document.addEventListener("click", (e) => {
+  const clickedInsideSidebar = sidebar.contains(e.target);
+  const clickedToggle = showBtn.contains(e.target) || hideBtn.contains(e.target);
+  if (sidebar.classList.contains("active") && !clickedInsideSidebar && !clickedToggle) {
+    closeSidebar();
   }
+});
+</script>
 
-  function nextSlide() {
-    showSlide(currentSlide + 1);
-  }
 
-  function prevSlide() {
-    showSlide(currentSlide - 1);
-  }
 
-  function pauseSlider() {
-    clearInterval(sliderInterval);
-  }
-
-  function resumeSlider() {
-    sliderInterval = setInterval(nextSlide, 5000);
-  }
-    </script>
+   
   </body>
 </html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="var(--theme)" />
+    <title>TicketPro Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="explore.css" />
+    <link rel="stylesheet" href="light-dark.css" />
+    <link rel="stylesheet" href="top-bar.css" />
+    <link rel="stylesheet" href="toggle-side.css" />
+    <link rel="icon" href="images/logo.jpg" type="image/png" />
+  </head>
+
+  <body>
+    <div class="top-header">
+      <a href="index.html" class="header-brand">
+        <div>
+          <img src="images/title-icon.png" alt="TicketPro Logo" class="header-logo" />
+        </div>
+        <h2>TicketPro</h2>
+      </a>
+    </div>
+
+   <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <br /><br />
+      
+      <div id="noResults" style="padding: 0.5rem; font-size: 0.9rem; color: crimson; display: none;">
+        No match found.
+      </div>
+      <nav id="docLinks">
+        <h2 class="sidebar-heading">Explore Features</h2>
+        <ul>
+          <a href="index.html"><i class="fa fa-home"></i> <h5>Home</h5></a>
+          <a href="entry.html" ><i class="fa fa-door-open"></i> <h5>Entry Surveillance</h5></a>
+          <a href="exit.html" ><i class="fa fa-door-closed"></i> <h5>Exit Surveillance</h5></a>
+          <a href="payment.html"><i class="fa fa-credit-card"></i><h5>Payment Scheme</h5> </a>
+          <a href="authorize.html" class="active"><i class="fa fa-user-shield"></i> <h5>Authorization</h5></a>
+          <a href="announcement.html"><i class="fa fa-bullhorn"></i> <h5>Announcement</h5></a>
+          <a href="daily_sales.html"><i class="fa fa-cash-register"></i><h5>Daily Sales</h5> </a>
+          <a href="record.html"><i class="fa fa-folder-open"></i> <h5>Records</h5></a>
+          <a href="stat.html"><i class="fa fa-chart-line"></i> <h5>Statistics</h5></a>
+          <a href="setting.html"><i class="fa fa-cog"></i> <h5>Settings</h5></a>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+   <div class="content e-docs">
+  <h1>Authorization</h1>
+
+  <section>
+    <p>
+      The Authorization panel is the control center for managing access within 
+      TicketPro. It ensures that only authorized personnel can create, edit, 
+      or remove users and system entities. This keeps the platform secure and 
+      organized across different roles and entities.
+    </p>
+  </section>
+
+  <section>
+    <h2>Security Checks</h2>
+    <p>
+      Before a user can access this page, the system verifies their identity, 
+      role, and session validity. If access is denied, the user is redirected 
+      to the homepage with a warning. These checks protect sensitive 
+      administrative tools from unauthorized use.
+    </p>
+  </section>
+
+  <section>
+    <h2>User Management</h2>
+    <p>
+      Administrators can view and manage all registered users through the 
+      <em>Manage Users</em> option. They also have the ability to create new 
+      accounts using <em>Add Users</em>, assigning appropriate roles and 
+      privileges for each person.
+    </p>
+  </section>
+
+  <section>
+    <h2>Entity Management</h2>
+    <p>
+      TicketPro supports multiple markets or organizational units. With the 
+      <em>Add Entity</em> function, new markets can be added easily. The 
+      <em>Manage Entity</em> tool allows administrators to update details or 
+      remove outdated entries, keeping the system flexible and scalable.
+    </p>
+  </section>
+
+  <section>
+    <h2>Administrative Control</h2>
+    <p>
+      All authorization functions are grouped neatly for quick navigation. 
+      Icons and labels guide administrators to the right tools, making the 
+      process of managing users and entities straightforward.
+    </p>
+  </section>
+
+  <section>
+    <h2>Purpose</h2>
+    <p>
+      The goal of the Authorization section is to maintain order, security, 
+      and accountability in the TicketPro system. By clearly defining roles 
+      and permissions, it ensures smooth collaboration without compromising 
+      data integrity.
+    </p>
+  </section>
+</div>
+
+  </div>
+
+  <script src="index.js"></script>
+  
+   
+  </body>
+</html>

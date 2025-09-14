@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="var(--theme)" />
+    <title>TicketPro Documentation - Records</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="explore.css" />
+    <link rel="stylesheet" href="light-dark.css" />
+    <link rel="stylesheet" href="top-bar.css" />
+    <link rel="stylesheet" href="toggle-side.css" />
+    <link rel="icon" href="images/logo.jpg" type="image/png" />
+  </head>
+
+  <body>
+    <!-- Top header -->
+    <div class="top-header">
+      <a href="index.html" class="header-brand">
+        <div>
+          <img
+            src="images/title-icon.png"
+            alt="TicketPro Logo"
+            class="header-logo"
+          />
+        </div>
+        <h2>TicketPro</h2>
+      </a>
+    </div>
+
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <br /><br />
+        <nav id="docLinks">
+          <h2 class="sidebar-heading">Explore Features</h2>
+          <ul>
+            <a href="index.html"><i class="fa fa-home"></i> <h5>Home</h5></a>
+            <a href="entry.html"><i class="fa fa-door-open"></i> <h5>Entry Surveillance</h5></a>
+            <a href="exit.html"><i class="fa fa-door-closed"></i> <h5>Exit Surveillance</h5></a>
+            <a href="payment.html"><i class="fa fa-credit-card"></i> <h5>Payment Scheme</h5></a>
+            <a href="authorize.html"><i class="fa fa-user-shield"></i> <h5>Authorization</h5></a>
+            <a href="announcement.html"><i class="fa fa-bullhorn"></i> <h5>Announcement</h5></a>
+            <a href="daily_sales.html"><i class="fa fa-cash-register"></i> <h5>Daily Sales</h5></a>
+            <a href="record.html" class="active"><i class="fa fa-folder-open"></i> <h5>Records</h5></a>
+            <a href="stat.html"><i class="fa fa-chart-line"></i> <h5>Statistics</h5></a>
+            <a href="setting.html"><i class="fa fa-cog"></i> <h5>Settings</h5></a>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Main Content -->
+      <div class="content e-docs">
+        <h1>Records</h1>
+
+        
+        <p>
+          The <strong>Records Module</strong> provides a complete history of vehicle movements and staff activities within the TicketPro system.  
+          It is divided into two major sections: <em>Admission Records</em> and <em>Exit Records</em>, <em>staff shift Records</em>, <em>Sales Records</em>, <em>Entry & Exit Barrier Access Records</em> both of which ensure transparency, accountability, and traceability.
+        </p>
+      
+
+        <!-- Admission Records -->
+        <section>
+          <h2><i class="fa fa-car-side"></i> Admission Records</h2>
+          <p>
+            Admission Records capture every vehicle that enters the facility. Each record logs the 
+            <strong>vehicle type</strong>, <strong>card number</strong>, <strong>entry date and time</strong>, 
+            <strong>entry gate</strong>, and the <strong>operator</strong> who admitted the vehicle.
+          </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>Filtering:</strong> Administrators can filter by market, date range, and vehicle type.</li>
+            <li><strong>Grouping:</strong> Records are grouped by day for easy navigation.</li>
+            <li><strong>Pagination:</strong> Each page shows one day's admissions to prevent overload.</li>
+            <li><strong>Summary:</strong> At the bottom, a summary shows total admissions by vehicle type and overall count.</li>
+            <li><strong>Export:</strong> Records can be exported as clean PDF reports for auditing and management use.</li>
+          </ul>
+
+          <h3>Purpose</h3>
+          <p>
+            This module helps ensure accurate tracking of all vehicles that entered the facility. 
+            It assists with reconciling daily sales, verifying operator performance, and providing proof of entry.
+          </p>
+        </section>
+
+        <!-- Exit Records -->
+        <section>
+          <h2><i class="fa fa-sign-out-alt"></i> Exit Records</h2>
+          <p>
+            Exit Records log every vehicle that leaves the facility. This includes details such as 
+            <strong>vehicle type</strong>, <strong>card number</strong>, <strong>exit date and time</strong>, 
+            <strong>exit gate</strong>, and the <strong>operator</strong> who authorized the exit.
+          </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>Filtering:</strong> Supports filtering by market, date range, and vehicle type for precise queries.</li>
+            <li><strong>Grouping:</strong> Just like admissions, exit records are grouped by day for clarity.</li>
+            <li><strong>Accountability:</strong> Ensures that only vehicles with valid admission records are exited.</li>
+            <li><strong>Export:</strong> Reports can be exported to PDF for auditing and regulatory checks.</li>
+          </ul>
+
+          <h3>Purpose</h3>
+          <p>
+            This module provides assurance that all vehicles exited lawfully after payment and entry verification.  
+            It strengthens security, prevents fraud, and provides full traceability of every vehicle that has used the facility.
+          </p>
+        </section>
+
+        <!-- Combined Use -->
+        <section>
+          <h2>How Admission & Exit Records Work Together</h2>
+          <p>
+            Both modules are tightly connected. A vehicle’s <em>admission record</em> is cross-checked against its 
+            <em>exit record</em> to ensure balance.  
+            Administrators can quickly detect anomalies such as vehicles that entered but never exited, or attempted exits without valid admission.
+          </p>
+        </section>
+
+         <section>
+    <h2><i class="fas fa-receipt"></i> Sales Records</h2>
+    <p>
+      The <strong>Sales Records</strong> page provides detailed tracking of all vehicle sales across
+      entities. Records are grouped <strong>by date</strong> and can be filtered by:
+    </p>
+    <ul>
+      <li><strong>Entity</strong> – Admins see all, Managers see assigned entity.</li>
+      <li><strong>Operator</strong> – Filter sales by the operator who issued the ticket.</li>
+      <li><strong>Payment Option</strong> – Cash or POS, stored in <code>payment_option</code> column.</li>
+      <li><strong>Date Range</strong> – Specific start and end dates.</li>
+    </ul>
+    <p>
+      Each entry displays receipt number, vehicle details, operator name, entity, payment option,
+      and time. Pagination groups results by day, with totals summarized at the bottom.
+    </p>
+    <div class="note">
+      Export is available in PDF format, with headers and summaries matching other reports.
+    </div>
+  </section>
+
+  <!-- Operator Shift Section -->
+  <section>
+    <h2><i class="fas fa-user-clock"></i> Staff Shifts Record</h2>
+    <p>
+      The <strong>Staff Shift Record</strong> page displays login and logout activity of operators
+      across different entities. Records are grouped by <strong>date</strong> and support filters for:
+    </p>
+    <ul>
+      <li><strong>Entity</strong> – Access controlled by role.</li>
+      <li><strong>Operator</strong> – Select from active operators.</li>
+      <li><strong>Date Range</strong> – To view shifts in a specific period.</li>
+    </ul>
+    <p>
+      Each record includes operator name, assigned entity, login time, logout time,
+      and duration of the shift. Pagination ensures one day’s records per page.
+    </p>
+    <div class="note">
+      Shift records can also be <strong>exported</strong> to PDF for reporting.
+    </div>
+  </section>
+
+  <!-- Entry Barrier Access Section -->
+  <section>
+    <h2><i class="fas fa-door-open"></i> Entry Barrier Access Record</h2>
+    <p>
+      The <strong>Entry Barrier Access</strong> page shows log attempts at entry gates.
+      It tracks whether access attempts succeeded or failed, recording the gate,
+      operator, trigger type, and related receipt.
+    </p>
+    <h3>Features:</h3>
+    <ul>
+      <li><strong>Role-based access</strong> – Admins can view all entities, Managers/Park Officers only their assigned one.</li>
+      <li><strong>Filters</strong> – By date, trigger type (manual/auto), operator, and receipt number.</li>
+      <li><strong>Logs</strong> – Includes timestamp, gate, status, message, operator, and entity.</li>
+    </ul>
+    <p>
+      Results are grouped by date, with “see more” functionality to progressively load
+      10 records at a time. This prevents long pages and improves performance.
+    </p>
+  </section>
+
+  <!-- Exit Barrier Access Section -->
+  <section>
+    <h2><i class="fas fa-traffic-light"></i> Exit Barrier Access Record</h2>
+    <p>
+      The <strong>Exit Barrier Access</strong> page works similarly to Entry Barrier Access,
+      but tracks logs from the <strong>exit gates</strong> (<code>Exit #1</code> and <code>Exit #2</code>).
+    </p>
+    <h3>Key Details:</h3>
+    <ul>
+      <li><strong>Access Control</strong> – Admins may filter by entity or view all. Managers/Park Officers are restricted to their assigned entity.</li>
+      <li><strong>Date Handling</strong> – By default, records are grouped daily. Admins and Managers can also select a date range.</li>
+      <li><strong>Filters</strong> – 
+        <ul>
+          <li>Trigger type (<code>manual</code> or <code>auto</code>)</li>
+          <li>Operator</li>
+          <li>Receipt Number</li>
+          <li>Date Range</li>
+        </ul>
+      </li>
+      <li><strong>Logs Displayed</strong> – Each record shows receipt number (if auto), gate, operator, entity, trigger type, status (success/error), and time.</li>
+    </ul>
+    <h3>Daily Grouping & Pagination</h3>
+    <p>
+      Logs are grouped by date with a styled header for readability. Each day starts
+      by showing 10 records. The <strong>“See More” button</strong> uses AJAX
+       to fetch additional logs without reloading the page.
+    </p>
+    <div class="note">
+      Status values are color-coded: <span style="color:green;">green = success</span>,
+      <span style="color:red;">red = failure</span>. Manual triggers are labeled with a 🔧 icon,
+      automatic with ⚙️.
+    </div>
+  </section>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

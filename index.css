@@ -1,45 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
 
-:root {
-  --bg: #f9fafb;
-  --text: #1e293b; 
-  --light: #ffffff; 
-  --primary: #6366f1; 
-  --shadow: rgba(0, 0, 0, 0.06) 0px 4px 20px;
-  --content-box: #ffffff;
-  --contact-box: rgba(243, 244, 246, 0.8);  
-  --contact-section: linear-gradient(to right, #e0f2fe, #f0f9ff); 
---footer-gradient: linear-gradient(135deg, #cbd5e1, #94a3b8);
---content-h1: Black;
---footer-copy: #606264;
---footer-border-top: rgba(105, 103, 103, 0.308);
---theme: #b9c5d6;
---header: #292929 ;
---box-content: white;
---span: linear-gradient(90deg, #ceee3f, #0ea5e9);
-
-
-}
-
-
-[data-theme="dark"] {
-  --bg: oklch(13% .028 261.692);
-  --text: #f8fafc;
-  --light: #1e293b;
-  --primary: #4f46e5;
-  --shadow: rgba(0, 0, 0, 0.08) 0px 4px 24px;
-  --content-box: linear-gradient(135deg, #0f172a, #1e293b);
-  --contact-box: rgba(255, 255, 255, 0.05);
-  --contact-section: linear-gradient(to right, #0f172a, #1e293b);
-  --header: linear-gradient(135deg, #0f172a, #1e293b) ;
-  --footer-gradient:linear-gradient(135deg, #0f172a, #1e293b);
-  --content-h1: white;
-  --footer-copy: #94a3b8;
-  --footer-border-top: rgba(255, 255, 255, 0.08);
-  --theme: #0f172a;
-  --box-content: linear-gradient(135deg, #0f172a, #1e293b);
-  --span: linear-gradient(to right, #4f46e5, #9333ea);
-}
 
 html,
 body {
@@ -74,59 +34,6 @@ body {
   z-index: 1000;
 }
 
-.top-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 64px;
-  padding: 0 1.5rem;
-  background: var(--header);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  z-index: 1100;
-}
-
-.header-brand h2 {
-  font-family: 'Inter', 'Raleway', sans-serif;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0;
-  background: linear-gradient(to right, #38bdf8, #38bdf8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
-  letter-spacing: 0.5px;
-}
-
-.header-brand{
-  display: flex;
-}
-
-.menu-toggle {
-  background: transparent;
-  font-size: 1.25rem;
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 0.4rem;
-  transition: color 0.3s ease;
-  display: none;
-}
-
-.menu-toggle:hover {
-  color: #38bdf8;
-}
-
-.header-logo {
-  height: 30px;
-  width: auto;
-  margin-right: 0.5rem;
-  border-radius: 6px;
-}
 
 #install {
   padding: 2rem 0;
@@ -364,10 +271,8 @@ body {
 }
 
 
-
-/* INTRO SECTION */
 #intro {
-  min-height: 100vh; /* Full screen height on large screens */
+  min-height: 100vh; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -379,7 +284,6 @@ body {
   margin-left: 0;
 }
 
-/* Container layout */
 .intro-container {
   display: flex;
   align-items: center;
@@ -387,7 +291,6 @@ body {
   flex-wrap: wrap;
 }
 
-/* Text Styling */
 .intro-text {
   max-width: 700px;
   text-align: center;
@@ -418,7 +321,7 @@ body {
   color: var(--footer-copy, #94a3b8);
 }
 
-/* Image Styling */
+
 .intro-image img {
   max-width: 100%;
   height: auto;
@@ -426,7 +329,7 @@ body {
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
 }
 
-/* Large Screens */
+
 @media (min-width: 1068px) {
   .intro-container {
     flex-direction: row;
@@ -436,7 +339,7 @@ body {
     text-align: left;
   }
   .intro-text h1 {
-    font-size: 3.2rem; /* Bigger heading on large screens */
+    font-size: 3.2rem; 
   }
   .intro-text .lead {
     font-size: 1.4rem;
@@ -758,7 +661,7 @@ body.no-scroll {
 }
 
 .contact-section {
-  background: var(--box-content); /* dark blue to dark slate */
+  background: var(--box-content);
   padding: 1rem;
   border-radius: 12px;
   color: var(--text);
@@ -775,7 +678,7 @@ body.no-scroll {
 }
 
 .contact-box {
-  background: var(--contact-box); /* transparent overlay effect */
+  background: var(--contact-box); 
   padding: 1rem 1.5rem;
   border-radius: 10px;
   flex: 1;
@@ -793,7 +696,7 @@ body.no-scroll {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
   display: block;
-  color: #38bdf8; /* light blue accent */
+  color: #38bdf8; 
 }
 
 .contact-box a, .contact-box p {
@@ -1189,10 +1092,6 @@ body.no-scroll {
   .content {
     margin-left: 0;
     padding: 1rem 1rem 0 1rem;
-  }
-
-  .menu-toggle {
-    display: block;
   }
 
   .content h1 {

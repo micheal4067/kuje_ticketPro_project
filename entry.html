@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="var(--theme)" />
+    <title>TicketPro Documentation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="explore.css" />
+    <link rel="stylesheet" href="light-dark.css" />
+    <link rel="stylesheet" href="top-bar.css" />
+    <link rel="stylesheet" href="toggle-side.css" />
+    <link rel="icon" href="images/logo.jpg" type="image/png" />
+  </head>
+
+  <body>
+    <div class="top-header">
+      <a href="index.html" class="header-brand">
+        <div>
+          <img src="images/title-icon.png" alt="TicketPro Logo" class="header-logo" />
+        </div>
+        <h2>TicketPro</h2>
+      </a>
+      
+    </div>
+
+   <div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <br /><br />
+      
+      <div id="noResults" style="padding: 0.5rem; font-size: 0.9rem; color: crimson; display: none;">
+        No match found.
+      </div>
+      <nav id="docLinks">
+        <h2 class="sidebar-heading">Explore Features</h2>
+        <ul>
+          <a href="index.html"><i class="fa fa-home"></i> <h5>Home</h5></a>
+          <a href="entry.html" class="active"><i class="fa fa-door-open"></i> <h5>Entry Surveillance</h5></a>
+          <a href="exit.html"><i class="fa fa-door-closed"></i> <h5>Exit Surveillance</h5></a>
+          <a href="payment.html"><i class="fa fa-credit-card"></i><h5>Payment Scheme</h5> </a>
+          <a href="authorize.html"><i class="fa fa-user-shield"></i> <h5>Authorization</h5></a>
+          <a href="announcement.html"><i class="fa fa-bullhorn"></i> <h5>Announcement</h5></a>
+          <a href="daily_sales.html"><i class="fa fa-cash-register"></i><h5>Daily Sales</h5> </a>
+          <a href="record.html"><i class="fa fa-folder-open"></i> <h5>Records</h5></a>
+          <a href="stat.html"><i class="fa fa-chart-line"></i> <h5>Statistics</h5></a>
+          <a href="setting.html"><i class="fa fa-cog"></i> <h5>Settings</h5></a>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+ <div class="content e-docs">
+  <h1>Entry Surveillance</h1>
+
+  <section>
+    <p>
+      The Entry Dashboard is the main interface operators use for daily activities, 
+      such as issuing tickets, monitoring parking slots, and managing entry or exit barriers.
+    </p>
+  </section>
+
+  <section>
+    <h2>Ticket Issuance</h2>
+    <p>
+      Different types of tickets are displayed as interactive buttons. 
+      Operators can quickly select a ticket type, including special options like VIP passes, 
+      to process vehicle entry smoothly. Ticket Issuance triggers corresponding barrier to open.
+    </p>
+  </section>
+
+  <section>
+    <h2>Parking Monitoring</h2>
+    <p>
+      The sidebar shows live updates of available parking slots, 
+      vehicle categories (cars, tricycles, trucks, VIP), 
+      and the total parking fees collected. 
+      This gives operators a clear view of space usage at all times.
+    </p>
+  </section>
+
+  <section>
+    <h2>Gate Control</h2>
+    <p>
+      Operators can directly open or manage entry and exit barriers 
+      through the dashboard using simple control buttons, 
+      ensuring smooth traffic flow.
+    </p>
+  </section>
+
+  <section>
+    <h2>Search & Logs</h2>
+    <p>
+      A search feature is provided to look up tickets by their numbers, 
+      while activity logs display recent operations for accountability and tracking.
+    </p>
+  </section>
+
+  <section>
+    <h2>Additional Tools</h2>
+    <p>
+      The dashboard also supports features like light/dark mode switching, 
+      auto-refresh, and mobile-friendly layouts, 
+      making it efficient to use across different devices.
+    </p>
+  </section>
+
+</div>
+
+
+
+  </div>
+
+  <script src="index.js"></script>
+  
+   
+  </body>
+</html>

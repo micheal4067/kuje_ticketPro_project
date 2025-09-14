@@ -26,10 +26,6 @@ function handleOutsideClick(event) {
   }
 }
 
-
-  /*const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');*/
-
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
@@ -148,5 +144,70 @@ function reopenDidYouKnow() {
       }
     });
   });
+
+  const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        applyTheme(savedTheme);
+      } else {
+        applyTheme('auto');
+      }
+
+      function openAppearanceModal() {
+        document.getElementById('appearanceModal').style.display = 'block';
+      }
+
+      function closeAppearanceModal() {
+        document.getElementById('appearanceModal').style.display = 'none';
+      }
+
+      function setTheme(theme) {
+        localStorage.setItem('theme', theme);
+        applyTheme(theme);
+        closeAppearanceModal();
+      }
+
+      function applyTheme(theme) {
+        if (theme === 'dark') {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else if (theme === 'light') {
+          document.documentElement.setAttribute('data-theme', 'light');
+        } else {
+          const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+        }
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'auto') {
+          applyTheme('auto');
+        }
+      });
+
+       let currentSlide = 0;
+  let sliderInterval = setInterval(nextSlide, 5000);
+
+  function showSlide(index) {
+    const wrapper = document.getElementById("sliderWrapper");
+    const totalSlides = wrapper.children.length;
+    currentSlide = (index + totalSlides) % totalSlides;
+    wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function pauseSlider() {
+    clearInterval(sliderInterval);
+  }
+
+  function resumeSlider() {
+    sliderInterval = setInterval(nextSlide, 5000);
+  }
 
    document.getElementById("year").textContent = new Date().getFullYear();
