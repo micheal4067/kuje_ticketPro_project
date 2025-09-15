@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="var(--theme)" />
     <title>TicketPro Documentation - Records</title>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      })();
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -13,10 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="explore.css" />
-    <link rel="stylesheet" href="light-dark.css" />
-    <link rel="stylesheet" href="top-bar.css" />
-    <link rel="stylesheet" href="toggle-side.css" />
+    <link rel="stylesheet" href="css/explore.css" />
+    <link rel="stylesheet" href="css/light-dark.css" />
+    <link rel="stylesheet" href="css/top-bar.css" />
+    <link rel="stylesheet" href="css/toggle-side.css" />
     <link rel="icon" href="images/logo.jpg" type="image/png" />
   </head>
 
@@ -63,11 +71,9 @@
         
         <p>
           The <strong>Records Module</strong> provides a complete history of vehicle movements and staff activities within the TicketPro system.  
-          It is divided into two major sections: <em>Admission Records</em> and <em>Exit Records</em>, <em>staff shift Records</em>, <em>Sales Records</em>, <em>Entry & Exit Barrier Access Records</em> both of which ensure transparency, accountability, and traceability.
+          It is divided into six major sections: <em>Admission Records</em> and <em>Exit Records</em>, <em>staff shift Records</em>, <em>Sales Records</em>, <em>Entry & Exit Barrier Access Records</em> all of which ensure transparency, accountability, and traceability.
         </p>
       
-
-        <!-- Admission Records -->
         <section>
           <h2><i class="fa fa-car-side"></i> Admission Records</h2>
           <p>
@@ -78,7 +84,7 @@
 
           <h3>Key Features</h3>
           <ul>
-            <li><strong>Filtering:</strong> Administrators can filter by market, date range, and vehicle type.</li>
+            <li><strong>Filtering:</strong> Administrators can filter by entity, date range, and vehicle type.</li>
             <li><strong>Grouping:</strong> Records are grouped by day for easy navigation.</li>
             <li><strong>Pagination:</strong> Each page shows one day's admissions to prevent overload.</li>
             <li><strong>Summary:</strong> At the bottom, a summary shows total admissions by vehicle type and overall count.</li>
@@ -92,7 +98,6 @@
           </p>
         </section>
 
-        <!-- Exit Records -->
         <section>
           <h2><i class="fa fa-sign-out-alt"></i> Exit Records</h2>
           <p>
@@ -103,7 +108,7 @@
 
           <h3>Key Features</h3>
           <ul>
-            <li><strong>Filtering:</strong> Supports filtering by market, date range, and vehicle type for precise queries.</li>
+            <li><strong>Filtering:</strong> Supports filtering by entity, date range, and vehicle type for precise queries.</li>
             <li><strong>Grouping:</strong> Just like admissions, exit records are grouped by day for clarity.</li>
             <li><strong>Accountability:</strong> Ensures that only vehicles with valid admission records are exited.</li>
             <li><strong>Export:</strong> Reports can be exported to PDF for auditing and regulatory checks.</li>
@@ -147,7 +152,6 @@
     </div>
   </section>
 
-  <!-- Operator Shift Section -->
   <section>
     <h2><i class="fas fa-user-clock"></i> Staff Shifts Record</h2>
     <p>
@@ -168,7 +172,6 @@
     </div>
   </section>
 
-  <!-- Entry Barrier Access Section -->
   <section>
     <h2><i class="fas fa-door-open"></i> Entry Barrier Access Record</h2>
     <p>
@@ -188,7 +191,6 @@
     </p>
   </section>
 
-  <!-- Exit Barrier Access Section -->
   <section>
     <h2><i class="fas fa-traffic-light"></i> Exit Barrier Access Record</h2>
     <p>
@@ -212,8 +214,7 @@
     <h3>Daily Grouping & Pagination</h3>
     <p>
       Logs are grouped by date with a styled header for readability. Each day starts
-      by showing 10 records. The <strong>“See More” button</strong> uses AJAX
-       to fetch additional logs without reloading the page.
+      by showing 10 records. The <strong>“See More” button</strong> fetches additional logs from database.
     </p>
     <div class="note">
       Status values are color-coded: <span style="color:green;">green = success</span>,

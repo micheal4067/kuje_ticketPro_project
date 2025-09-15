@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: var(--bg);
+  color: var(--bg);
+  line-height: 1.6;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  margin: 60px 1rem;
+  gap: 2rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 60px; 
+  left: 0;
+  width: 250px;
+  height: calc(100% - 60px);
+  background: var(--explore-side-bar);
+  
+  padding: 1rem 0.5rem;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.3);
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 999;
+  transition: width 0.3s ease;
+}
+
+.sidebar-heading {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--explore-side-bar-heading);
+  margin: 0 0 1rem 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar nav ul a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1rem;
+  margin-bottom: 6px;
+  color: var(--explore-side-a);
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+  position: relative; 
+}
+
+.sidebar nav ul a i {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  min-width: 20px;
+  text-align: center;
+}
+
+.sidebar nav ul a h5 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+
+.sidebar nav ul a:hover {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--text);
+}
+
+.sidebar nav ul a.active {
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+.content {
+  flex: 1;
+  border-radius: 12px;
+  padding: auto;
+  margin-left: 260px; 
+  transition: margin-left 0.3s ease;
+}
+
+
+.e-docs {
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 12px;
+  
+  line-height: 1.7;
+}
+
+.e-docs h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #4da3ff;
+}
+
+.e-docs section {
+  margin-bottom: 2rem;
+}
+
+.e-docs h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--explore-h2); 
+  border-left: 4px solid #4da3ff;
+  padding-left: 0.75rem;
+}
+
+.e-docs p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+
+@media (max-width: 768px) {
+  .e-docs {
+    padding: 1rem;
+  }
+  .e-docs h1 {
+    font-size: 1.5rem;
+  }
+  .e-docs h2 {
+    font-size: 1.1rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 70px; 
+    padding: 1rem 0.3rem;
+  }
+
+  .sidebar-heading {
+    display: none;
+  }
+
+  .content h1{
+    font-size: 20px;
+  }
+
+  .sidebar nav ul a {
+    justify-content: center;
+    gap: 0;
+    padding: 0.8rem;
+  }
+
+  .sidebar nav ul a h5 {
+    display: none; 
+  }
+
+  .wrapper{
+    margin: 60px 0;
+  }
+
+  .content {
+    margin-left: 50px; 
+  }
+ 
+  .sidebar nav ul a::after {
+    content: attr(data-label); 
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #222;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 6px;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-left: 8px;
+    transition: opacity 0.2s ease;
+  }
+
+  .sidebar nav ul a:hover::after {
+    opacity: 1;
+  }
+}

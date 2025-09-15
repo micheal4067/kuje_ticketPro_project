@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="var(--theme)" />
     <title>TicketPro Documentation</title>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      })();
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -13,10 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="explore.css" />
-    <link rel="stylesheet" href="light-dark.css" />
-    <link rel="stylesheet" href="top-bar.css" />
-    <link rel="stylesheet" href="toggle-side.css" />
+    <link rel="stylesheet" href="css/explore.css" />
+    <link rel="stylesheet" href="css/light-dark.css" />
+    <link rel="stylesheet" href="css/top-bar.css" />
+    <link rel="stylesheet" href="css/toggle-side.css" />
     <link rel="icon" href="images/logo.jpg" type="image/png" />
   </head>
 
@@ -91,10 +99,10 @@
   <section>
     <h2>Entity Management</h2>
     <p>
-      TicketPro supports multiple markets or organizational units. With the 
-      <em>Add Entity</em> function, new markets can be added easily. The 
+      TicketPro supports multiple entity's or organizational units. With the 
+      <em>Add Entity</em> function, new entity can be added easily. The 
       <em>Manage Entity</em> tool allows administrators to update details or 
-      remove outdated entries, keeping the system flexible and scalable.
+      remove entity, keeping the system flexible and scalable.
     </p>
   </section>
 

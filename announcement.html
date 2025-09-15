@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="var(--theme)" />
     <title>TicketPro Documentation</title>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      })();
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -13,10 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="explore.css" />
-    <link rel="stylesheet" href="light-dark.css" />
-    <link rel="stylesheet" href="top-bar.css" />
-    <link rel="stylesheet" href="toggle-side.css" />
+    <link rel="stylesheet" href="css/explore.css" />
+    <link rel="stylesheet" href="css/light-dark.css" />
+    <link rel="stylesheet" href="css/top-bar.css" />
+    <link rel="stylesheet" href="css/toggle-side.css" />
     <link rel="icon" href="images/logo.jpg" type="image/png" />
   </head>
 
@@ -72,24 +80,10 @@
     <h2>Posting Announcements</h2>
     <p>
       Administrators can post announcements either as 
-      <em>General Notices</em> (visible to all markets) or target 
-      specific markets by selecting them from the drop-down menu. 
+      <em>General Notices</em> (visible to all entity's) or target 
+      specific entity by selecting them from the drop-down menu. 
       Managers, on the other hand, can only post announcements 
-      within their assigned market.
-    </p>
-  </section>
-
-  <section>
-    <h2>Targeting Scope</h2>
-    <p>
-      The system supports flexible targeting:
-      <ul>
-        <li><strong>General Notice:</strong> Broadcasts to every market.</li>
-        <li><strong>Specific Market:</strong> Limits visibility 
-            to one chosen entity.</li>
-        <li><strong>Manager Role:</strong> Automatically limited 
-            to their assigned market only.</li>
-      </ul>
+      within their assigned entity.
     </p>
   </section>
 
@@ -97,7 +91,7 @@
     <h2>Viewing Announcements</h2>
     <p>
       All users can see announcements that are relevant to their scope. 
-      Each notice displays the content, posting market, author, and 
+      Each notice displays the content, posting entity, author, and 
       date/time for accountability.
     </p>
   </section>

@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="var(--theme)" />
     <title>TicketPro Docs | Settings</title>
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      })();
+    </script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -13,10 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="explore.css" />
-    <link rel="stylesheet" href="light-dark.css" />
-    <link rel="stylesheet" href="top-bar.css" />
-    <link rel="stylesheet" href="toggle-side.css" />
+    <link rel="stylesheet" href="css/explore.css" />
+    <link rel="stylesheet" href="css/light-dark.css" />
+    <link rel="stylesheet" href="css/top-bar.css" />
+    <link rel="stylesheet" href="css/toggle-side.css" />
     <link rel="icon" href="images/logo.jpg" type="image/png" />
   </head>
 
@@ -74,8 +82,8 @@
         <ul>
           <li>The system fetches all available <code>entity’s</code> from the central <code>ticket</code> database.</li>
           <li>You select an (entity) from the dropdown list. This determines which entity database to use.</li>
-          <li>The system checks for the <code>communication_settings</code> table in that database.</li>
-          <li>If the table exists, it loads the current configuration values (IPs and parking slots).</li>
+          <li>The system checks for the <code>communication settings</code> table in that database.</li>
+          <li>If it exists, it loads the current configuration values (IPs and parking slots).</li>
           <li>Admins can edit and save:
             <ul>
               <li><strong>Entry 1 & 2 IPs:</strong> IP addresses of entry barriers.</li>
@@ -108,7 +116,7 @@
 
         <h3>Key Features</h3>
         <ul>
-          <li><strong>Select Market:</strong> Like Communication Settings, you first choose the  (entity) 
+          <li><strong>Select Entity:</strong> Like Communication Settings, you first choose the  (entity) 
           to apply maintenance actions.</li>
           <li><strong>Delete Old Records:</strong>
             <ul>
