@@ -21,6 +21,7 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .side_bar.active {
