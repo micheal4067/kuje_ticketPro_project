@@ -6,7 +6,7 @@
         <div class="spinner-wrapper">
           <div class="spinner"></div>
           <div class="spinner-icon-bg">
-            <img src="./images/title-icon.png" alt="Loading Icon" class="spinner-icon">
+            <img src="./images/loading-icon.png" alt="Loading Icon" class="spinner-icon">
           </div>
         </div>`;
     }
